@@ -26,8 +26,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div id="hiddenWin">
+        隠れてる
+    </div>
     <div id="wrapper">
-	
         <header class="site_header">
             <div class="siteTitle">
                 <?php if(is_front_page()): ?>
@@ -37,39 +39,40 @@
                 <?php endif; ?>
                 <p class="catch"><?php bloginfo('description'); ?></p>
             </div>
+            <div class="right">
+                <a href="#" class="showbtn1">開く</a>
+            </div>
             <?php if(is_front_page()): ?>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="img_sitemain">
-                            <?php if(get_header_image()): ?>
+                        <div class="img_sitemain" style="background-image: url('<?php header_image(); ?>');">
+                            <?php /*if(get_header_image()): ?>
                                 <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
                             <?php else: ?>
                                 <p class="center"><?php bloginfo('name'); ?></p>
-                            <?php endif; ?>
+                            <?php endif;*/ ?>
                         </div>
                     </div>
                 </div>
             <?php endif; ?>
             <div class="contanier">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                        <nav id="mainMenu">
-                            <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
-                            <?php /*
-                            <ul>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/category/information/" class="btn btn-success btn-lg">お知らせ</a>
-                                </li>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/category/concert/" class="btn btn-success btn-lg">コンサート情報</a>
-                                </li>
-                                <li>
-                                    <a href="" class="btn btn-success btn-lg">プロフィール</a>
-                                </li>
-                            </ul>
-                            */ ?>
-                        </nav>
-                    </div>
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <nav id="mainMenu">
+                        <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
+                        <?php /*
+                        <ul>
+                            <li>
+                                <a href="<?php bloginfo('url'); ?>/category/information/" class="btn btn-success btn-lg">お知らせ</a>
+                            </li>
+                            <li>
+                                <a href="<?php bloginfo('url'); ?>/category/concert/" class="btn btn-success btn-lg">コンサート情報</a>
+                            </li>
+                            <li>
+                                <a href="" class="btn btn-success btn-lg">プロフィール</a>
+                            </li>
+                        </ul>
+                        */ ?>
+                    </nav>
                 </div>
             </div>
         </header>

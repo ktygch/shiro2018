@@ -39,6 +39,73 @@ body{
     position: relative;
 }
 
+#hiddenWin{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: {
+        color: rgba(157,124,54,.5);
+    }
+    transition: all ease .4s;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    z-index: 100;
+}
+
+header.site_header{
+    //min-height: 200px;
+    .siteTitle{
+        box-sizing: border-box;
+        padding: 40px 0 50px;
+        h1{
+            margin: 0 0 10px;
+            color: #007546;
+            text-align: center;
+            a{
+                color: #007546;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .catch{
+            margin: 0;
+            text-align: center;
+        }
+    }
+    
+    #mainMenu{
+        margin-top: -3em;
+        margin-bottom: 3em;
+        @media (max-width: 767px){
+            margin: 0 auto;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            li{
+                a{
+                    display: block;
+                    width: 10em;
+                    line-height: 6em;
+                    padding: 0 7%;
+                    text-align: center;
+                    border-radius: 4em;
+                    background: {
+                        color: #F8F6D3;
+                    }
+                    @media (max-width: 767px){
+                        line-height: 1.4em;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #main{
     padding-bottom: 200px;
 }
@@ -61,38 +128,6 @@ footer{
         address{
             margin: 0;
         }
-    }
-}
-
-.site_header{
-    //min-height: 200px;
-    .siteTitle{
-        box-sizing: border-box;
-        padding: 40px 0 50px;
-        h1{
-            margin: 0 0 10px;
-            color: #007546;
-            text-align: center;
-            a{
-                color: #007546;
-                text-decoration: none;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-        .catch{
-            margin: 0;
-            text-align: center;
-        }
-    }
-}
-
-#mainMenu{
-    margin-bottom: 60px;
-    ul{
-        display: flex;
-        justify-content: space-between;
     }
 }
 
@@ -129,16 +164,14 @@ h3{
     max-width: 1102px;
     height: 350px;
     margin: 0 auto;
-    /*background: {
-        image: url(#{$imgPath}toppageheader.jpg);
+    background: {
         repeat: no-repeat;
         position: center center;
-        size: contain;
-    }*/
-    border-radius: 20px;
+        size: cover;
+    }
+    border-radius: 6em;
     overflow: hidden;
     img{
-        //width: 100%;
         height: auto;
         @media (max-width: 767px){
             width: auto;
