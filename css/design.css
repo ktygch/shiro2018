@@ -134,13 +134,18 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(157, 124, 54, 0.5);
+  background-color: rgba(100, 140, 200, 0.5);
   -webkit-transition: all ease .4s;
   transition: all ease .4s;
   position: fixed;
   left: 0;
   top: -100%;
   z-index: 100; }
+
+header.site_header .sp_btn {
+  text-align: right;
+  position: relative;
+  z-index: 10; }
 
 header.site_header .siteTitle {
   -webkit-box-sizing: border-box;

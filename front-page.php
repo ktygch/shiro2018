@@ -21,14 +21,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <h2 class="idx">お知らせ</h2>
+                <h2 class="idx">連絡事項</h2>
                 <ul class="toplist">
+                    <?php /*
                     <!-- list item -->
-                    <?php $news = get_posts('posts_per_page=10'); ?>
+                    <?php $news = get_posts('posts_per_page=6'); ?>
                     <?php foreach($news as $post): ?>
                         <li>
                             <?php setup_postdata($post); ?>
@@ -48,10 +48,33 @@
                         </li>
                     <?php endforeach; ?>
                     <?php wp_reset_postdata(); ?>
-                    <!-- list item --> 
+                    <!-- list item -->
+                    */ ?>
+                    <?php $posts = get_posts(array('posts_per_page'=>5,'cat'=>3)); ?>
+                    <?php foreach($posts as $post): ?>
+                        <?php setup_postdata($post); ?>
+                        <li>
+                            <?php setup_postdata($post); ?>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php
+                                    $image_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_image_src($image_id, true);
+                                ?>
+                                <span class="thumbimg" style="background-image: url(<?php echo $image_url[0]; ?>)"></span>
+                                <div class="list_txt">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p>
+                                        <span class="date"><?php the_date('Y.n.d'); ?></span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-6">
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <h2 class="idx">団員募集中</h2>
                 <p class="f12">こどもの城児童合唱団では、団員を募集しております。2017年4月からの新団員の募集を受け付けます。</p>
                 <ul class="">
@@ -71,18 +94,8 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h2 class="idx">連絡事項</h2>
-                <ul>
-                    <li>
-                        <a href="">6/10の練習について</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                 <h2 class="idx">Instagram</h2>
                 <div id="instafeed"></div>
 

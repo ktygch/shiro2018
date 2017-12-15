@@ -28,9 +28,15 @@
 <body <?php body_class(); ?>>
     <div id="hiddenWin">
         隠れてる
+        <ul>
+            <li><a href="<?php bloginfo('url'); ?>/profile/">プロフィール</a></li>
+        </ul>
     </div>
     <div id="wrapper">
         <header class="site_header">
+            <div class="sp_btn">
+                <a href="#" class="showbtn1">開く</a>
+            </div>
             <div class="siteTitle">
                 <?php if(is_front_page()): ?>
                     <h1><?php bloginfo('name'); ?></h1>
@@ -38,9 +44,6 @@
                     <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
                 <?php endif; ?>
                 <p class="catch"><?php bloginfo('description'); ?></p>
-            </div>
-            <div class="right">
-                <a href="#" class="showbtn1">開く</a>
             </div>
             <?php if(is_front_page()): ?>
                 <div class="container-fluid">
