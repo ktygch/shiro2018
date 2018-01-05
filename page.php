@@ -2,7 +2,7 @@
 	Template Name: page_default
 */ ?>
 <?php get_header(); ?>
-<p>page.php</p>
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12">

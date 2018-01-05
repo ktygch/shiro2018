@@ -37,45 +37,70 @@
             <div class="sp_btn">
                 <a href="#" class="showbtn1">開く</a>
             </div>
-            <div class="siteTitle">
-                <?php if(is_front_page()): ?>
-                    <h1><?php bloginfo('name'); ?></h1>
-                <?php else: ?>
-                    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-                <?php endif; ?>
-                <p class="catch"><?php bloginfo('description'); ?></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        <div class="siteTitle">
+                            <?php if(is_front_page()): ?>
+                                <h1>
+                                    <span></span>
+                                    <?php bloginfo('name'); ?>
+                                </h1>
+                            <?php else: ?>
+                                <h1>
+                                    <span></span>
+                                    <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                                </h1>
+                            <?php endif; ?>
+                            <p class="catch">
+                                <?php /*カスタム案件 コメントアウト
+                                <?php bloginfo('description'); ?>
+                                */ ?>
+                                みなさん、こんにちは！　こどもの城合唱団です。<br class="hidden-xs">
+                                ぼくたち・わたしたちの歌を聴いて<br class="hidden-sm hidden-md hidden-lg">下さい！
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <?php if(is_front_page()): ?>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="img_sitemain" style="background-image: url('<?php header_image(); ?>');">
-                            <?php /*if(get_header_image()): ?>
-                                <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
-                            <?php else: ?>
-                                <p class="center"><?php bloginfo('name'); ?></p>
-                            <?php endif;*/ ?>
+                            <div class="toppage_prof col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                                <?php $page = get_page_by_path('header_txt'); ?>
+                                <h2><?php echo $page -> post_title; ?></h2>
+                                <?php /*
+                                <div class="text">
+                                    <?php echo $page -> post_content; ?>
+                                </div>
+                                */ ?>
+                            </div>
+        
                         </div>
                     </div>
                 </div>
             <?php endif; ?>
-            <div class="contanier">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <nav id="mainMenu">
-                        <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
-                        <?php /*
-                        <ul>
-                            <li>
-                                <a href="<?php bloginfo('url'); ?>/category/information/" class="btn btn-success btn-lg">お知らせ</a>
-                            </li>
-                            <li>
-                                <a href="<?php bloginfo('url'); ?>/category/concert/" class="btn btn-success btn-lg">コンサート情報</a>
-                            </li>
-                            <li>
-                                <a href="" class="btn btn-success btn-lg">プロフィール</a>
-                            </li>
-                        </ul>
-                        */ ?>
-                    </nav>
+            <div class="container hidden-xs">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <nav id="mainMenu">
+                            <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
+                            <?php /*
+                            <ul>
+                                <li>
+                                    <a href="<?php bloginfo('url'); ?>/category/information/" class="btn btn-success btn-lg">お知らせ</a>
+                                </li>
+                                <li>
+                                    <a href="<?php bloginfo('url'); ?>/category/concert/" class="btn btn-success btn-lg">コンサート情報</a>
+                                </li>
+                                <li>
+                                    <a href="" class="btn btn-success btn-lg">プロフィール</a>
+                                </li>
+                            </ul>
+                            */ ?>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>

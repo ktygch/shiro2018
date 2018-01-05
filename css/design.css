@@ -143,32 +143,56 @@ body {
   z-index: 100; }
 
 header.site_header .sp_btn {
+  width: 100%;
   text-align: right;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  right: 0;
   z-index: 10; }
 
 header.site_header .siteTitle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 40px 0 50px; }
+  padding: 2em 0;
+  text-align: center; }
   header.site_header .siteTitle h1 {
-    margin: 0 0 10px;
-    color: #007546;
-    text-align: center; }
+    line-height: 40px;
+    width: 380px;
+    margin: 0 auto 40px;
+    padding-left: 65px;
+    color: #3C898A;
+    font-weight: 800;
+    text-align: left;
+    position: relative; }
+    @media (max-width: 767px) {
+      header.site_header .siteTitle h1 {
+        width: 95%; } }
+    header.site_header .siteTitle h1 span {
+      display: inline-block;
+      width: 60px;
+      height: 80px;
+      background-image: url(../image/svg/emblem_2.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      position: absolute;
+      top: -50%;
+      left: 0; }
     header.site_header .siteTitle h1 a {
-      color: #007546;
+      color: #3C898A;
       text-decoration: none; }
       header.site_header .siteTitle h1 a:hover {
         text-decoration: underline; }
   header.site_header .siteTitle .catch {
-    margin: 0;
-    text-align: center; }
+    margin: 0 auto;
+    max-width: 400px;
+    font-size: 14px; }
 
 header.site_header #mainMenu {
-  margin-top: -3em;
   margin-bottom: 3em; }
   @media (max-width: 767px) {
     header.site_header #mainMenu {
+      display: none;
       margin: 0 auto; } }
   header.site_header #mainMenu ul {
     display: -webkit-box;
@@ -183,8 +207,8 @@ header.site_header #mainMenu {
       line-height: 6em;
       padding: 0 7%;
       text-align: center;
-      border-radius: 4em;
-      background-color: #F8F6D3; }
+      font-size: 16px;
+      background-color: #fff; }
       @media (max-width: 767px) {
         header.site_header #mainMenu ul li a {
           line-height: 1.4em;
@@ -221,7 +245,7 @@ h3 {
   line-height: 35px;
   padding: 0 5px;
   margin: 0 0 10px;
-  font-size: 14px; }
+  font-size: 2em; }
 
 #menu-menu-1 {
   display: table;
@@ -235,45 +259,56 @@ h3 {
       text-align: center; }
 
 .img_sitemain {
-  max-width: 1102px;
-  height: 350px;
+  height: 450px;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  border-radius: 6em;
-  overflow: hidden; }
-  .img_sitemain img {
-    height: auto; }
-    @media (max-width: 767px) {
-      .img_sitemain img {
-        width: auto;
-        height: 100%; } }
-
-.row.philosophy {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 60px 0;
-  line-height: 1.5em; }
-
-ul.toplist li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  ul.toplist li a .thumbimg {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 0 0 10px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; }
-  ul.toplist li a .list_txt {
+  overflow: hidden;
+  position: relative;
+  /*
+    img{
+        height: auto;
+        @media (max-width: 767px){
+            width: auto;
+            height: 100%;
+        }
+    }
+    */ }
+  .img_sitemain .toppage_prof {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0 15px; }
-    ul.toplist li a .list_txt h3 {
-      margin: 0 0 10px; }
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    color: #fff;
+    text-align: right;
+    position: absolute;
+    bottom: 0; }
+    .img_sitemain .toppage_prof h2, .img_sitemain .toppage_prof .text {
+      /*
+            filter:
+                dropshadow(color=#000000,offX= 0,offY=-1)
+                dropshadow(color=#000000,offX= 1,offY= 0)
+                dropshadow(color=#000000,offX= 0,offY= 1)
+                dropshadow(color=#000000,offX=-1,offY= 0);
+            
+            -webkit-text-stroke-color: #000;
+            -webkit-text-stroke-width: 1px;
+
+            text-shadow: 
+                black 1px 1px 0px,
+                black -1px 1px 0px,
+                black 1px -1px 0px,
+                black -1px -1px 0px;
+            */ }
+
+.row.toppage_info {
+  margin-bottom: 60px; }
+
+.row.recruitment {
+  margin-bottom: 60px; }
 
 .postlist li a {
   display: block; }

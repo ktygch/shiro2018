@@ -55,19 +55,47 @@ body{
 
 header.site_header{
     .sp_btn{
+        width: 100%;
         text-align: right;
-        position: relative;
+        position: fixed;
+        bottom: 0;
+        right: 0;
         z-index: 10;
     }
     .siteTitle{
         box-sizing: border-box;
-        padding: 40px 0 50px;
+        padding: 2em 0;
+        text-align: center;
         h1{
-            margin: 0 0 10px;
-            color: #007546;
-            text-align: center;
+            line-height: 40px;
+            width: 380px;
+            margin: 0 auto 40px;
+            padding-left: 65px;
+            //color: #007546;
+            color: #3C898A;
+            font-weight: 800;
+            text-align: left;
+            position: relative;
+            @media (max-width: 767px){
+                width: 95%;
+            }
+            span{
+                display: inline-block;
+                width: 60px;
+                height: 80px;
+                background: {
+                    image: url(#{$imgPath}svg/emblem_2.svg);
+                    repeat: no-repeat;
+                    position: center center;
+                    size: contain;
+                }
+                position: absolute;
+                top: -50%;
+                left: 0;
+            }
             a{
-                color: #007546;
+                //color: #007546;
+                color: #3C898A;
                 text-decoration: none;
                 &:hover{
                     text-decoration: underline;
@@ -75,15 +103,17 @@ header.site_header{
             }
         }
         .catch{
-            margin: 0;
-            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+            font-size: 14px;
         }
     }
     
     #mainMenu{
-        margin-top: -3em;
+        //margin-top: -3em;
         margin-bottom: 3em;
         @media (max-width: 767px){
+            display: none;
             margin: 0 auto;
         }
         ul{
@@ -96,9 +126,10 @@ header.site_header{
                     line-height: 6em;
                     padding: 0 7%;
                     text-align: center;
-                    border-radius: 4em;
+                    font-size: 16px;
                     background: {
-                        color: #F8F6D3;
+                        //color: #F8F6D3;
+                        color: #fff;
                     }
                     @media (max-width: 767px){
                         line-height: 1.4em;
@@ -146,7 +177,7 @@ h3{
     padding: 0 5px;
     margin: 0 0 10px;
     font: {
-        size: 14px;
+        size: 2em;
     }
 }
 
@@ -165,16 +196,18 @@ h3{
 }
 
 .img_sitemain{
-    max-width: 1102px;
-    height: 350px;
+    //max-width: 1102px;
+    height: 450px;
     margin: 0 auto;
+    box-sizing: border-box;
     background: {
         repeat: no-repeat;
         position: center center;
         size: cover;
     }
-    border-radius: 6em;
     overflow: hidden;
+    position: relative;
+    /*
     img{
         height: auto;
         @media (max-width: 767px){
@@ -182,38 +215,43 @@ h3{
             height: 100%;
         }
     }
-}
+    */
+    .toppage_prof{
+        box-sizing: border-box;
+        line-height: 1.5em;
+        padding-bottom: 1em;
+        color: #fff;
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        h2, .text{
+            /*
+            filter:
+                dropshadow(color=#000000,offX= 0,offY=-1)
+                dropshadow(color=#000000,offX= 1,offY= 0)
+                dropshadow(color=#000000,offX= 0,offY= 1)
+                dropshadow(color=#000000,offX=-1,offY= 0);
+            
+            -webkit-text-stroke-color: #000;
+            -webkit-text-stroke-width: 1px;
 
-.row.philosophy{
-    box-sizing: border-box;
-    padding: 60px 0;
-    line-height: 1.5em;
-}
-
-ul.toplist{
-    li{
-        a{
-            display: flex;
-            .thumbimg{
-                display: block;
-                width: 80px;
-                height: 80px;
-                margin: 0 0 10px;
-                background: {
-                    repeat: no-repeat;
-                    position: center center;
-                    size: cover;
-                }
-            }
-            .list_txt{
-                box-sizing: border-box;
-                padding: 0 15px;
-                h3{
-                    margin: 0 0 10px;
-                }
-            }
+            text-shadow: 
+                black 1px 1px 0px,
+                black -1px 1px 0px,
+                black 1px -1px 0px,
+                black -1px -1px 0px;
+            */
         }
     }
+}
+
+
+.row.toppage_info{
+    margin-bottom: 60px;
+}
+
+.row.recruitment{
+    margin-bottom: 60px;
 }
 
 .postlist{//archive.php
