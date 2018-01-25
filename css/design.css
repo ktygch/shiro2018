@@ -124,7 +124,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2; }
+    z-index: 11; }
 
 #wrapper {
   min-height: 100%;
@@ -142,79 +142,126 @@ body {
   top: -100%;
   z-index: 100; }
 
-header.site_header .sp_btn {
-  width: 100%;
-  text-align: right;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 10; }
-
-header.site_header .siteTitle {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 2em 0;
-  text-align: center; }
-  header.site_header .siteTitle h1 {
-    line-height: 40px;
-    width: 380px;
-    margin: 0 auto 40px;
-    padding-left: 65px;
-    color: #3C898A;
-    font-weight: 800;
-    text-align: left;
-    position: relative; }
-    @media (max-width: 767px) {
-      header.site_header .siteTitle h1 {
-        width: 95%; } }
-    header.site_header .siteTitle h1 span {
-      display: inline-block;
-      width: 60px;
-      height: 80px;
-      background-image: url(../image/svg/emblem_2.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
+header.site_header {
+  height: auto;
+  position: relative; }
+  body.home header.site_header {
+    height: 100vh; }
+    body.home header.site_header:before, body.home header.site_header:after {
+      content: "";
+      display: block;
       position: absolute;
-      top: -50%;
-      left: 0; }
-    header.site_header .siteTitle h1 a {
-      color: #3C898A;
-      text-decoration: none; }
-      header.site_header .siteTitle h1 a:hover {
-        text-decoration: underline; }
-  header.site_header .siteTitle .catch {
-    margin: 0 auto;
-    max-width: 400px;
-    font-size: 14px; }
-
-header.site_header #mainMenu {
-  margin-bottom: 3em; }
-  @media (max-width: 767px) {
-    header.site_header #mainMenu {
-      display: none;
-      margin: 0 auto; } }
-  header.site_header #mainMenu ul {
+      background-repeat: no-repeat;
+      background-size: contain; }
+    body.home header.site_header:before {
+      width: 100%;
+      height: 35%;
+      background-image: url(../image/top_cloud_lt.png);
+      background-position: left top;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    body.home header.site_header:after {
+      width: 800px;
+      height: 120px;
+      background-image: url(../image/top_cloud_rb.png);
+      background-position: right bottom;
+      bottom: 0;
+      right: 0; }
+  header.site_header .siteTitle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    header.site_header #mainMenu ul li a {
-      display: block;
-      width: 10em;
-      line-height: 6em;
-      padding: 0 7%;
-      text-align: center;
-      font-size: 16px;
-      background-color: #fff; }
+    height: 100px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 3em 0 1.5em;
+    /*
+        background: {
+            color: rgba(255,255,255,1);
+        }
+        */
+    position: relative;
+    z-index: 10; }
+    header.site_header .siteTitle h1 {
+      line-height: 40px;
+      width: 380px;
+      margin: 0 0 0 5%;
+      padding-left: 65px;
+      color: #3C898A;
+      font-size: 25px;
+      font-weight: 800;
+      text-align: left;
+      position: relative; }
       @media (max-width: 767px) {
-        header.site_header #mainMenu ul li a {
-          line-height: 1.4em;
-          width: auto; } }
+        header.site_header .siteTitle h1 {
+          width: 95%; } }
+      header.site_header .siteTitle h1 span {
+        display: inline-block;
+        width: 60px;
+        height: 80px;
+        background-image: url(../image/svg/emblem_2.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        position: absolute;
+        top: -50%;
+        left: 0; }
+      header.site_header .siteTitle h1 a {
+        color: #3C898A;
+        text-decoration: none; }
+        header.site_header .siteTitle h1 a:hover {
+          text-decoration: underline; }
+    header.site_header .siteTitle .catch {
+      margin: 0 0 0 5%;
+      max-width: 400px;
+      font-size: 14px; }
+  header.site_header .mainMenu_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    line-height: 40px;
+    position: relative;
+    z-index: 10; }
+    body.home header.site_header .mainMenu_wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    header.site_header .mainMenu_wrap #mainMenu {
+      margin: 0 auto; }
+      @media (max-width: 767px) {
+        header.site_header .mainMenu_wrap #mainMenu {
+          display: none;
+          margin: 0 auto; } }
+      header.site_header .mainMenu_wrap #mainMenu ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin: 0; }
+        header.site_header .mainMenu_wrap #mainMenu ul li a {
+          display: block;
+          width: 10em;
+          line-height: 40px;
+          padding: 0 7%;
+          text-align: center;
+          font-size: 16px;
+          background-color: #fff; }
+          @media (max-width: 767px) {
+            header.site_header .mainMenu_wrap #mainMenu ul li a {
+              line-height: 1.4em;
+              width: auto; } }
+    header.site_header .mainMenu_wrap .sp_btn {
+      width: 40px;
+      margin-left: auto;
+      text-align: center;
+      background-color: #fff; }
 
 #main {
+  padding-top: 10vh;
   padding-bottom: 200px; }
 
 footer {
@@ -259,7 +306,8 @@ h3 {
       text-align: center; }
 
 .img_sitemain {
-  height: 450px;
+  width: 100%;
+  height: 90vh;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -267,7 +315,9 @@ h3 {
   background-position: center center;
   background-size: cover;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   /*
     img{
         height: auto;
@@ -277,6 +327,11 @@ h3 {
         }
     }
     */ }
+  .img_sitemain h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
   .img_sitemain .toppage_prof {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;

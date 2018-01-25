@@ -5,10 +5,10 @@
            
             <div class="col-xs-12">
                 <div class="col-xs-12 col-sm-6 col-sm-push-6">
-                    <?php get_sidebar(); ?>
+                    <?php echo do_shortcode('[eo_fullcalendar]'); ?>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-sm-pull-6">
-                    <?php echo do_shortcode('[eo_fullcalendar]'); ?>
+                    <?php get_sidebar(); ?>
                 </div>
             </div>
             
