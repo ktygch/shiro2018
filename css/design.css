@@ -156,8 +156,12 @@ header.site_header {
     body.home header.site_header:before {
       width: 100%;
       height: 35%;
-      background-image: url(../image/top_cloud_lt.png);
-      background-position: left top;
+      /*
+            background: {
+                image: url(../image/top_cloud_lt.png);
+                position: left top;
+            }
+            */
       top: 0;
       left: 0;
       z-index: 1; }
@@ -176,11 +180,7 @@ header.site_header {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 3em 0 1.5em;
-    /*
-        background: {
-            color: rgba(255,255,255,1);
-        }
-        */
+    background-color: white;
     position: relative;
     z-index: 10; }
     header.site_header .siteTitle h1 {
