@@ -15,22 +15,25 @@
    
     <script src="<?php bloginfo('template_directory'); ?>/js/min/default.min.js?<?php echo $timestamp; ?>"></script>
     
-    <?php /*
+    <script src="<?php bloginfo('template_directory'); ?>/js/min/wow.min.js?<?php echo $timestamp; ?>"></script>
+    <script>
+        new WOW().init();
+    </script>
+    
     <script src="<?php bloginfo('template_directory'); ?>/js/min/instafeed.min.js"></script>
     <script type="text/javascript">
         var feed = new Instafeed({
-            clientId: '272f5d732d3b444ea518608b736d1eda',
+            clientId: 'e050ccd6ea3b46ea976654336aef026c',
             get: 'user', 
-            userId: '6671230376',
-            accessToken:'6671230376.272f5d7.6771bac82c354ebf8248bc38dfd8796f',
+            userId: '4372116736',
+            accessToken:'4372116736.1677ed0.dbd93064e75a41d282b8c68aa0ff5c96',
             links: true,
-            limit: 18, // 取得件数 
+            limit: 20, // 取得件数 
             resolution:'thumbnail', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
             template: '<a href="{{link}}"><img src={{image}} alt={{caption}}></a>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
         });
         feed.run();
     </script>
-    */ ?>
     
 	<?php if(is_front_page()): ?>
 		<?php if(wp_is_mobile()): ?>

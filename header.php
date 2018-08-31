@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bs/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/design.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
 	<?php /*ie8以前へのhtml5対応用スクリプト*/ ?>
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -56,18 +58,11 @@
             </div>
             <?php if(is_front_page()): ?>
                 <div class="img_sitemain" style="background-image: url('<?php header_image(); ?>');">
-                        <?php $page = get_page_by_path('header_txt'); ?>
-                        <h2><?php echo $page -> post_title; ?></h2>
-                        <?php /*
-                        <div class="text">
-                            <?php echo $page -> post_content; ?>
-                        </div>
-                        */ ?>
                 </div>
             <?php endif; ?>
-            <div class="mainMenu_wrap">
+            <div class="fixedmenu">
                 <div class="fixed_logo">
-                    <a href="">トップページ</a>
+                    <a href="<?php bloginfo('url'); ?>">トップページ</a>
                 </div>
                 <nav id="mainMenu">
                     <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>

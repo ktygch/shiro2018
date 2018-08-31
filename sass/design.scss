@@ -58,37 +58,21 @@ header.site_header{
     position: relative;
     body.home &{
         height: 100vh;
-        &:before, &:after{
+        &:before{
             content: "";
             display: block;
-            position: absolute;
+            width: 800px;
+            height: 200px;
             background: {
+                image: url(#{$imgPath}svg/titleback.svg);
                 repeat: no-repeat;
                 size: contain;
-            }
-        }
-        &:before{
-            width: 100%;
-            height: 35%;
-            /*
-            background: {
-                image: url(#{$imgPath}top_cloud_lt.png);
                 position: left top;
             }
-            */
+            position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
-        }
-        &:after{
-            width: 800px;
-            height: 120px;
-            background: {
-                image: url(#{$imgPath}top_cloud_rb.png);
-                position: right bottom;
-            }
-            bottom: 0;
-            right: 0;
         }
     }
     .siteTitle{
@@ -103,8 +87,7 @@ header.site_header{
         z-index: 10;
         h1{
             line-height: 40px;
-            width: 380px;
-            margin: 0 0 0 5%;
+            margin: 0 0 0 30px;
             padding-left: 65px;
             //color: #007546;
             color: #3C898A;
@@ -145,21 +128,46 @@ header.site_header{
         }
     }
     
-    .mainMenu_wrap{
+    .fixedmenu{
         display: flex;
         width: 100%;
         line-height: 40px;
+        background: #fff;
         position: relative;
         z-index: 10;
+        
+        &.fixed{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        
         body.home &{
             position: absolute;
+            top: inherit;
             bottom: 0;
             left: 0;
+            &.fixed{
+                position: fixed;
+                top: 0;
+                bottom: inherit;
+            }
+        }
+        
+        .fixed_logo{
+            a{
+                display: block;
+                line-height: 40px;
+                box-sizing: border-box;
+                padding: 0 10px;
+                font-size: 16px;
+            }
         }
         
         #mainMenu{
             //margin-top: -3em;
-            margin: 0 auto;
+            margin: 0;
             @media (max-width: 767px){
                 display: none;
                 margin: 0 auto;
@@ -171,9 +179,9 @@ header.site_header{
                 li{
                     a{
                         display: block;
-                        width: 10em;
+                        box-sizing: border-box;
                         line-height: 40px;
-                        padding: 0 7%;
+                        padding: 0 10px;
                         text-align: center;
                         font-size: 16px;
                         background: {
@@ -186,6 +194,7 @@ header.site_header{
                     }
                 }
             }
+            
         }
         
         .sp_btn{
@@ -257,7 +266,7 @@ h3{
 .img_sitemain{
     //max-width: 1102px;
     width: 100%;
-    height: 90vh;
+    height: calc( 100vh - 40px);
     margin: 0 auto;
     box-sizing: border-box;
     background: {
@@ -278,38 +287,20 @@ h3{
         }
     }
     */
-    h2{
-        color: #fff;
+    &:after{
+        content: "";
+        display: block;
+        width: 800px;
+        height: 120px;
+        background: {
+            image: url(#{$imgPath}top_cloud_rb.png);
+            repeat: no-repeat;
+            size: contain;
+            position: right bottom;
+        }
         position: absolute;
         bottom: 0;
         right: 0;
-    }
-    .toppage_prof{
-        box-sizing: border-box;
-        line-height: 1.5em;
-        padding-bottom: 1em;
-        color: #fff;
-        text-align: right;
-        position: absolute;
-        bottom: 0;
-        h2, .text{
-            /*
-            filter:
-                dropshadow(color=#000000,offX= 0,offY=-1)
-                dropshadow(color=#000000,offX= 1,offY= 0)
-                dropshadow(color=#000000,offX= 0,offY= 1)
-                dropshadow(color=#000000,offX=-1,offY= 0);
-            
-            -webkit-text-stroke-color: #000;
-            -webkit-text-stroke-width: 1px;
-
-            text-shadow: 
-                black 1px 1px 0px,
-                black -1px 1px 0px,
-                black 1px -1px 0px,
-                black -1px -1px 0px;
-            */
-        }
     }
 }
 
@@ -322,10 +313,11 @@ h3{
     margin-bottom: 60px;
 }
 
-.postlist{//archive.php
+.postlist{//archive.php, search.php
     li{
+        margin-bottom: 2em;
         a{
-            display: block;
+            display: flex;
             span.itemimg{
                 display: block;
                 width: 80px;
@@ -335,6 +327,11 @@ h3{
                     position: center center;
                     size: cover;
                 }
+            }
+            h3.post-title{
+                width: calc( 100% - 80px );
+                box-sizing: border-box;
+                padding: 0 10px;
             }
         }
     }
