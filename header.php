@@ -38,13 +38,13 @@
         <header class="site_header">
             <div class="siteTitle">
                 <?php if(is_front_page()): ?>
+                    <span></span>
                     <h1>
-                        <span></span>
                         <?php bloginfo('name'); ?>
                     </h1>
                 <?php else: ?>
+                    <span></span>
                     <h1>
-                        <span></span>
                         <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                     </h1>
                 <?php endif; ?>

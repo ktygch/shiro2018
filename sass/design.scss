@@ -15,6 +15,13 @@ body > #wrapper{
 
 body{
     @extend .chibimaru;
+    font-size: 14px;
+    @media (max-width: 480px) and (min-width: 321px){
+        font-size: 13px;
+    }
+    @media (max-width: 320px){
+        font-size: 11px;
+    }
     line-height: 1.5em;
     position: relative;
     &:before{
@@ -61,13 +68,13 @@ header.site_header{
         &:before{
             content: "";
             display: block;
-            width: 800px;
+            width: 100%;
             height: 200px;
             background: {
                 image: url(#{$imgPath}svg/titleback.svg);
                 repeat: no-repeat;
                 size: contain;
-                position: left top;
+                position: center top;
             }
             position: absolute;
             top: 0;
@@ -76,20 +83,32 @@ header.site_header{
         }
     }
     .siteTitle{
-        display: flex;
-        height: 100px;
+        width: 100%;
+        height: auto;
         box-sizing: border-box;
         padding: 3em 0 1.5em;
+        text-align: center;
         background: {
             color: rgba(255,255,255,1);
         }
         position: relative;
         z-index: 10;
+        span{
+            display: block;
+            width: 60px;
+            height: 80px;
+            margin: 0 auto;
+            background: {
+                image: url(#{$imgPath}svg/emblem_2.svg);
+                repeat: no-repeat;
+                position: center center;
+                size: contain;
+            }
+        }
         h1{
+            width: 400px;
             line-height: 40px;
-            margin: 0 0 0 30px;
-            padding-left: 65px;
-            //color: #007546;
+            margin: 0 auto;
             color: #3C898A;
             font-size: 25px;
             font-weight: 800;
@@ -97,20 +116,6 @@ header.site_header{
             position: relative;
             @media (max-width: 767px){
                 width: 95%;
-            }
-            span{
-                display: inline-block;
-                width: 60px;
-                height: 80px;
-                background: {
-                    image: url(#{$imgPath}svg/emblem_2.svg);
-                    repeat: no-repeat;
-                    position: center center;
-                    size: contain;
-                }
-                position: absolute;
-                top: -50%;
-                left: 0;
             }
             a{
                 //color: #007546;
@@ -122,7 +127,7 @@ header.site_header{
             }
         }
         .catch{
-            margin: 0 0 0 5%;
+            margin: 0 auto;
             max-width: 400px;
             font-size: 14px;
         }

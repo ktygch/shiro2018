@@ -30,8 +30,14 @@ a{
 }
 
 /*フォントファミリー*/
+//adobe
 .chibimaru{
     font-family: "tbchibirgothicplusk-pro";
+}
+//google
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates');
+.gf1{
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 /*フォントサイズ*/

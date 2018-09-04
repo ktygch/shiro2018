@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
 .clearfix {
   *zoom: 1; }
   .clearfix:after {
@@ -21,6 +22,9 @@ a {
 /*フォントファミリー*/
 .chibimaru {
   font-family: "tbchibirgothicplusk-pro"; }
+
+.gf1 {
+  font-family: 'Montserrat Alternates', sans-serif; }
 
 /*フォントサイズ*/
 .f10 {

@@ -15,7 +15,6 @@
         </div>
         
         <div class="row">
-           
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 wow fadeIn" data-wow-duration=".6s" data-wow-delay=".5s">
                 <h2 class="idx">お知らせ</h2>
                 <ul class="toplist">
