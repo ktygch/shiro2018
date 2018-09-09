@@ -3,18 +3,20 @@
 */ ?>
 <?php get_header(); ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <p>page.php</p>
-            <?php if(have_posts()): ?>
-                <?php while(have_posts()): ?>
-                    <?php the_post(); ?>
-                    <h3><?php the_title(); ?></h3>
-                    <p><?php the_content(); ?></p>
-                <?php endwhile; ?>
-            <?php endif; ?>
+<div id="pagePost" class="content wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-9 offset-sm-1">
+                <?php if(have_posts()): ?>
+                    <?php while(have_posts()): ?>
+                        <?php the_post(); ?>
+                        <h3 class="idx"><span><?php the_title(); ?></span></h3>
+                        <p><?php the_content(); ?></p>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>

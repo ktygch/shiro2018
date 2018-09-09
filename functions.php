@@ -32,6 +32,7 @@ register_sidebar(array(
 ));
 
 //カスタム投稿（コンサート用）
+/*
 add_action('init', 'my_custom_post');
 function my_custom_post(){
     register_post_type('concert', array(
@@ -46,7 +47,6 @@ function my_custom_post(){
         'has_archive' => true
     ));
     
-    //カスタム分類
     register_taxonomy('concert_cat', array(
         0 => 'concert',), array(
             'hierarchical' => true,
@@ -57,3 +57,4 @@ function my_custom_post(){
         )
     );
 }
+*/

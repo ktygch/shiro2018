@@ -1,12 +1,15 @@
-        </div><?php /* #main */ ?>
+            </div><?php /* #main */ ?>
+        </div><?php /*#contents*/ ?>
         
         <footer>
-            <div class="bottom">
-                <p class="margin0">こどもの城児童合唱団・混声合唱団</p>
-                <address>© 2017 kodomonoshiro-uta.com</address>
+            <div class="container">
+                <div class="bottom">
+                    <p>こどもの城児童合唱団・混声合唱団</p>
+                    <address>© 2017 kodomonoshiro-uta.com</address>
+                </div>
             </div>
         </footer>
-
+        
     </div><?php /*#wrapper*/ ?>
     
     <?php $timestamp = time() ?>
@@ -28,7 +31,7 @@
             userId: '4372116736',
             accessToken:'4372116736.1677ed0.dbd93064e75a41d282b8c68aa0ff5c96',
             links: true,
-            limit: 20, // 取得件数 
+            limit: 14, // 取得件数 
             resolution:'thumbnail', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
             template: '<a href="{{link}}"><img src={{image}} alt={{caption}}></a>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
         });
@@ -42,5 +45,6 @@
 	<?php endif; ?>
 	
 	<?php wp_footer(); ?>
+	
 </body>
 </html>

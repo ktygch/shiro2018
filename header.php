@@ -28,62 +28,44 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="hiddenWin">
-        隠れてる
-        <ul>
-            <li><a href="<?php bloginfo('url'); ?>/profile/">プロフィール</a></li>
-        </ul>
-    </div>
+    
     <div id="wrapper">
-        <header class="site_header">
-            <div class="siteTitle">
-                <?php if(is_front_page()): ?>
-                    <span></span>
-                    <h1>
-                        <?php bloginfo('name'); ?>
-                    </h1>
-                <?php else: ?>
-                    <span></span>
+       
+        <div id="hiddenWin" class="wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay=".2s">
+            <header class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay=".9s">
+                <div class="siteTitle">
                     <h1>
                         <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
                     </h1>
-                <?php endif; ?>
-                <p class="catch">
-                    <?php /*カスタム案件 コメントアウト
-                    <?php bloginfo('description'); ?>
-                    */ ?>
-                    みなさん、こんにちは！　こどもの城合唱団です。<br class="hidden-xs">
-                    ぼくたち・わたしたちの歌を聴いて<br class="hidden-sm hidden-md hidden-lg">下さい！
-                </p>
-            </div>
+                </div>
+            </header>
+           
+            <nav id="mainMenu" class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay="1.0s">
+                <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
+            </nav>
+            
+            <?php get_sidebar(); ?>
+        </div>
+        
+        <div class="fixedmenu">
+            <a href="#" class="showbtn1">
+                次回<br>
+                公演
+            </a>
+        </div>
+        
+        <div id="contents">
             <?php if(is_front_page()): ?>
-                <div class="img_sitemain" style="background-image: url('<?php header_image(); ?>');">
+                <div class="img_top wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".1s" style="background-image: url('<?php header_image(); ?>');">
+                    <?php /*
+                    <span>
+                        KODOMONO<br>
+                        SHIRO<br>
+                        CHORUS
+                    </span>
+                    */ ?>
                 </div>
             <?php endif; ?>
-            <div class="fixedmenu">
-                <div class="fixed_logo">
-                    <a href="<?php bloginfo('url'); ?>">トップページ</a>
-                </div>
-                <nav id="mainMenu">
-                    <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
-                    <?php /*
-                    <ul>
-                        <li>
-                            <a href="<?php bloginfo('url'); ?>/category/information/" class="btn btn-success btn-lg">お知らせ</a>
-                        </li>
-                        <li>
-                            <a href="<?php bloginfo('url'); ?>/category/concert/" class="btn btn-success btn-lg">コンサート情報</a>
-                        </li>
-                        <li>
-                            <a href="" class="btn btn-success btn-lg">プロフィール</a>
-                        </li>
-                    </ul>
-                    */ ?>
-                </nav>
-                <div class="sp_btn">
-                    <a href="#" class="showbtn1">開く</a>
-                </div>
-            </div>
-        </header>
-        
-        <div id="main">
+
+
+            <div id="main">
