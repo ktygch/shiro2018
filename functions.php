@@ -1,12 +1,4 @@
 <?php
-$defaults = array(
-	'default-image' => get_template_directory_uri(). '/image/toppageheader.jpg',
-	'flex-height' => true,
-	'flex-width' => true,
-	'header-text' => true,
-	'uploads' => true
-);
-add_theme_support('custom-header', $defaults);
 add_theme_support('post-thumbnails');
 register_nav_menu('top-menu', 'Top Menu');
 
@@ -58,3 +50,36 @@ function my_custom_post(){
     );
 }
 */
+$custom_header_defaults = array(
+    'default-image' => '',
+    'random-default' => false,
+    'width' => 0,
+    'height' => 0,
+    'flex-height' => false,
+    'flex-width' => false,
+    'default-text-color' => '',
+    'header-text' => true,
+    'uploads' => true,
+    'wp-head-callback' => '',
+    'admin-head-callback' => '',
+    'admin-preview-callback' => '',
+    'video' => true,
+    'video-active-callback' => 'is_front_page',
+);
+add_theme_support( 'custom-header', $custom_header_defaults );
+
+$custom_background_defaults = array(
+    'default-image' => '',
+    'default-preset' => 'default',
+    'default-position-x' => 'left',
+    'default-position-y' => 'top',
+    'default-size' => 'auto',
+    'default-repeat' => 'repeat',
+    'default-attachment' => 'scroll',
+    'default-color' => '',
+    'wp-head-callback' => '_custom_background_cb',
+    'admin-head-callback' => '',
+    'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-background', $custom_background_defaults );
+
