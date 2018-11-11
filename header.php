@@ -32,25 +32,29 @@
     <div id="wrapper">
        
         <div id="hiddenWin" class="wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay=".2s">
-            <header class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay=".9s">
-                <div class="siteTitle">
-                    <h1>
-                        <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-                    </h1>
-                </div>
-            </header>
-           
-            <nav id="mainMenu" class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay="1.0s">
-                <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
-            </nav>
-            
-            <?php get_sidebar(); ?>
+            <div class="hidden_right">
+                <header class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay=".9s">
+                    <div class="siteTitle">
+                        <h1>
+                            <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                        </h1>
+                    </div>
+                </header>
+            </div>
+            <div class="hidden_left">
+                <h2>メニュー</h2>
+                <nav id="mainMenu" class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay="1.0s">
+                    <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
+                </nav>
+                <h2>次回公演予定</h2>
+                <?php get_sidebar(); ?>
+            </div>
         </div>
         
         <div class="fixedmenu">
             <a href="#" class="showbtn1">
-                次回<br>
-                公演
+                <span>MENU</span><br>
+                次回公演
             </a>
         </div>
         

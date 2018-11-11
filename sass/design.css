@@ -116,8 +116,7 @@ body > #wrapper {
   position: relative; }
 
 #contents {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding-bottom: 300px;
   position: relative; }
   #contents::before {
@@ -125,7 +124,6 @@ body > #wrapper {
     display: block;
     width: 100%;
     height: 100%;
-    -webkit-transition: all .4s ease;
     transition: all .4s ease; }
   #contents.dark::before {
     background: rgba(0, 0, 0, 0.4);
@@ -137,20 +135,15 @@ body > #wrapper {
 footer {
   width: 100%;
   height: 300px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   left: 0;
   padding-bottom: 50px; }
   footer #footerMenu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin: 0 0 30px; }
     @media (max-width: 575px) {
       footer #footerMenu ul {
@@ -183,8 +176,7 @@ footer {
         background-image: url(../image/svg/ico_orng.svg); }
       footer #footerMenu ul li a {
         display: block;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         line-height: 40px;
         padding: 0 10px 0 0;
         text-align: left;
@@ -196,8 +188,7 @@ footer {
   footer .bottom {
     width: 100%;
     height: 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -233,19 +224,12 @@ body {
     z-index: 10; }
 
 #hiddenWin {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
   width: 800px;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: transparent;
-  -webkit-transition: all ease .4s;
   transition: all ease .4s;
   position: fixed;
   top: 0;
@@ -279,8 +263,7 @@ body {
     width: 500px;
     height: 100%;
     overflow-y: scroll;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 30px;
     background: #fff; }
     @media (max-width: 768px) and (min-width: 576px) {
@@ -323,8 +306,7 @@ body {
           background-image: url(../image/svg/ico_orng.svg); }
         #hiddenWin .hidden_left #mainMenu ul li a {
           display: block;
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
+          box-sizing: border-box;
           line-height: 40px;
           padding: 0 10px 0 0;
           text-align: left;
@@ -346,8 +328,7 @@ body {
     #hiddenWin .hidden_right header .siteTitle {
       width: 100%;
       height: auto;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       padding: 20px 0 0;
       margin: 0;
       text-align: center;
@@ -363,8 +344,7 @@ body {
           padding: 20px 0 0; } }
       #hiddenWin .hidden_right header .siteTitle h1 {
         line-height: 40px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         padding: 0;
         margin: 0;
         position: relative; }
@@ -405,8 +385,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 25px 0 0;
     line-height: 33px;
     font-size: 18px;
@@ -415,8 +394,7 @@ body {
     background-color: #FFE473;
     border-radius: 60px;
     color: #FF755E;
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg); }
+    transform: rotate(-20deg); }
     @media (max-width: 575px) {
       .fixedmenu a.showbtn1 {
         padding: 10px 0 0;
@@ -434,25 +412,24 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto 8em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   overflow: hidden;
   position: relative;
   /*
-    &::before{
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(0,0,0,.2);
-    }
-    */ }
+  &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.2);
+  }
+  */ }
   .img_top span {
     display: inline-block;
     line-height: 33px;
@@ -500,8 +477,7 @@ body {
 
 #main {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding-bottom: 200px; }
 
 .idx {
@@ -512,8 +488,7 @@ body {
   .idx span {
     display: inline-block;
     line-height: 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 10px 15px 20px;
     position: relative;
     font-size: 36px; }
@@ -566,26 +541,21 @@ h3 {
   #topInfo .toplist li {
     margin-bottom: 30px; }
     #topInfo .toplist li a {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex; }
       #topInfo .toplist li a .date {
         width: 27%;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         padding: 0 5px; }
         #topInfo .toplist li a .date span {
           display: inline-block;
           line-height: 30px;
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
+          box-sizing: border-box;
           font-size: 20px;
           border-bottom: 3px solid #26bec7; }
       #topInfo .toplist li a h3 {
         line-height: 28px;
         width: 73%;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         font-size: 22px; }
       @media (max-width: 767px) and (min-width: 576px) {
         #topInfo .toplist li a {
@@ -648,14 +618,9 @@ h3 {
   padding-top: 60px;
   margin-bottom: 100px; }
   #topAbout h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 80px;
     text-align: center; }
     @media (max-width: 575px) {
@@ -684,8 +649,7 @@ h3 {
       line-height: 60px;
       color: #3B8586;
       text-align: left;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       padding-top: 30px;
       font-size: 1.5em;
       position: relative; }
@@ -702,8 +666,7 @@ h3 {
     height: auto;
     margin: 0 auto; }
   #topAbout .desc {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 20px 0 0;
     font-size: 16px;
     line-height: 36px;
@@ -729,14 +692,9 @@ h3 {
         top: 0;
         left: 0; }
     #topAbout #sec2 .idx_right_insta {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+      justify-content: flex-end;
+      flex-wrap: wrap; }
       #topAbout #sec2 .idx_right_insta .logo_insta {
         display: inline-block;
         width: 40px;
@@ -761,19 +719,12 @@ h3 {
 
 #recruit h2 {
   margin-bottom: 1em; }
-
 #recruit p {
   margin-bottom: 1em; }
-
 #recruit ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 60px; }
   @media (max-width: 767px) {
     #recruit ul {
@@ -786,8 +737,7 @@ h3 {
     #recruit ul li .inner {
       width: 95%;
       min-height: 300px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       padding: 2em 1.5em 1em;
       margin: 0 auto;
       border-radius: 20px; }
@@ -798,13 +748,11 @@ h3 {
           #recruit ul li .inner h3 {
             font-size: 23px; } }
       #recruit ul li .inner dl dt, #recruit ul li .inner dl dd {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box; }
+        box-sizing: border-box; }
       #recruit ul li .inner dl dt span {
         display: inline-block;
         line-height: 24px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         padding: 0 10px;
         margin-bottom: 7px;
         font-size: 12px;
@@ -838,22 +786,17 @@ h3 {
           line-height: 30px; }
         #recruit ul li:nth-child(3) .inner dl dt span {
           background: #2cb7af; }
-
 #recruit .alert {
   padding: 40px 30px; }
 
 #instafeed {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   overflow: hidden;
   margin: 0 auto 3em; }
   #instafeed li {
     width: 20%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 1px; }
     @media (max-width: 575px) {
       #instafeed li {
@@ -884,14 +827,11 @@ h3 {
 .postlist li {
   margin-bottom: 3em; }
   .postlist li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
     .postlist li a span.itemimg {
       display: block;
       width: 20%;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       height: 80px;
       background-repeat: no-repeat;
       background-position: center center;
@@ -899,8 +839,7 @@ h3 {
     .postlist li a h3.post-title {
       width: 80%;
       line-height: 30px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       padding: 0 30px;
       font-size: 22px; }
 

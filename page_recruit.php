@@ -1,12 +1,12 @@
 <?php /*
-	Template Name: page_default
+	Template Name: page_recruit
 */ ?>
 <?php get_header(); ?>
 
-<div id="pagePost" class="content wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
+<div id="pageRecruit" class="content wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-10 offset-sm-1">
+            <div class="col-12 col-sm-6 offset-sm-3">
                 <?php if(have_posts()): ?>
                     <?php while(have_posts()): ?>
                         <?php the_post(); ?>

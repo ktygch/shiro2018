@@ -3,7 +3,7 @@
 <div id="archive" class="content wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-9 offset-sm-1">
+            <div class="col-12 col-sm-6 offset-sm-3">
                 <?php if (have_posts()) : ?>
                     <ul class="postlist">
                         <?php while (have_posts()) : the_post(); ?>

@@ -1,2 +1,29 @@
 #instafeed {
-  margin: 0 auto 200px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  margin: 0 auto 3em; }
+  #instafeed li {
+    width: 20%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1px; }
+    @media (max-width: 575px) {
+      #instafeed li {
+        width: 50%; } }
+    #instafeed li a {
+      display: block;
+      width: 100%; }
+      #instafeed li a span {
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+      #instafeed li a img {
+        width: 100%;
+        height: auto; }

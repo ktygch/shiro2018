@@ -1,5 +1,34 @@
 @charset "utf-8";
 
 #instafeed{
-    margin: 0 auto 200px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0 auto 3em;
+    li{
+        width: 20%;
+        box-sizing: border-box;
+        padding: 1px;
+        @media (max-width: 575px){
+            width: 50%;
+        }
+        a{
+            display: block;
+            width: 100%;
+            span{
+                display: block;
+                width: 100%;
+                height: 200px;
+                background: {
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                }
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
 }

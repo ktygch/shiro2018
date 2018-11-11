@@ -1,5 +1,6 @@
 jQuery(function($){
     //hiddenWin開く
+    /*
     $(function(){
         $('.fixedmenu').on('click', '.showbtn1', function(event){
             event.preventDefault();
@@ -17,49 +18,36 @@ jQuery(function($){
             });
         });
     });
-    
-    //fixedmenu
-    /*
-    $(function(){
-        $(window).on('scroll',function(){
-            var scrollValue = $(this).scrollTop();
-            $('.fixedmenu')
-            .trigger('customScroll', {posY: scrollValue});
-        });
-
-        $('.fixedmenu')
-        .each(function(){
-            var $this = $(this);
-            $this.data('initial', $this.offset().top);
-        })
-        .on('customScroll', function(event, object){
-            var $this = $(this);
-            if($this.data('initial') <= object.posY){
-                //要素を固定
-                if(!$this.hasClass('fixed')){
-                    var $substitute = $('<div></div>');
-                    $substitute
-                    .css({
-                        'margin':'0',
-                        'padding':'0',
-                        'font-size':'0',
-                        'height':'0'
-                    })
-                    .addClass('substitute')
-                    .height($this.outerHeight(true))
-                    .width($this.outerWidth(true));
-
-                    $this
-                    .after($substitute)
-                    .addClass('fixed');
-                }
-            }else{
-                //要素の固定を解除
-                $this.next('.substitute').remove();
-                $this.removeClass('fixed');
-            }
-        });
-    });
     */
+    
+    $('.showbtn1').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $this = $(this);
+
+        var menu = $('#hiddenWin');
+        
+        var cntnts = $('#contents');
+
+        if(menu.hasClass('active')){
+            $this.removeClass('on');
+            menu.removeClass('active');
+            cntnts.removeClass('dark');
+            $('html').off('click', closeItem);
+        }else{
+            $this.addClass('on');
+            menu.addClass('active');
+            cntnts.addClass('dark');
+            $('html').on('click', closeItem);
+        }
+
+        function closeItem(){
+            $this.removeClass('on');
+            menu.removeClass('active');
+            cntnts.removeClass('dark');
+        }
+
+    });
     
 });

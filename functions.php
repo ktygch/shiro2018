@@ -83,3 +83,12 @@ $custom_background_defaults = array(
 );
 add_theme_support( 'custom-background', $custom_background_defaults );
 
+
+// 同じ日付でも日付を表示
+function my_the_post() {
+    global $previousday;
+    $previousday = '';
+}
+add_action( 'the_post', 'my_the_post' );
+
+
