@@ -63,7 +63,7 @@
         
         <div id="sec1" class="row">
             <div class="col-12 col-sm-12 col-md-5 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
-                <img src="http://localhost:8888/shiro2016/wp-content/uploads/2018/09/test1.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo1.png" alt="">
             </div>
             <div class="col-12 col-sm-12 col-md-6 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
                 <p class="desc">
@@ -102,7 +102,7 @@
                 </p>
             </div>
             <div class="col-12 col-sm-12 col-md-5 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".9s" data-wow-offset="2">
-                <img src="http://localhost:8888/shiro2016/wp-content/uploads/2018/09/test1.png" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo2.png" alt="">
             </div>
         </div>
         

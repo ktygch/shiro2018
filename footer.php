@@ -8,16 +8,16 @@
                         <div id="footerMenu">
                             <ul>
                                 <li>
-                                    <a href="">ホーム</a>
+                                    <a href="<?php bloginfo('url'); ?>">ホーム</a>
                                 </li>
                                 <li>
-                                    <a href="">プロフィール</a>
+                                    <a href="<?php bloginfo('url'); ?>/?page_id=63">プロフィール</a>
                                 </li>
                                 <li>
-                                    <a href="">今後の予定</a>
+                                    <a href="<?php bloginfo('url'); ?>/?cat=5">今後の予定</a>
                                 </li>
                                 <li>
-                                    <a href="">活動報告</a>
+                                    <a href="<?php bloginfo('url'); ?>/?cat=1">活動報告</a>
                                 </li>
                                 <?php /*
                                 <li>
@@ -25,7 +25,7 @@
                                 </li>
                                 */ ?>
                                 <li>
-                                    <a href="">団員募集</a>
+                                    <a href="<?php bloginfo('url'); ?>/?page_id=1897">団員募集</a>
                                 </li>
                             </ul>
                         </div>

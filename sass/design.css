@@ -224,41 +224,100 @@ body {
     z-index: 10; }
 
 #hiddenWin {
+  /*
   display: flex;
   flex-direction: row-reverse;
+  */
   width: 800px;
   height: 100%;
   box-sizing: border-box;
-  background: transparent;
+  background: #fff;
   transition: all ease .4s;
   position: fixed;
   top: 0;
-  left: -500px;
+  left: -800px;
   z-index: 5;
-  /*左上雲*/ }
+  /*左上雲
+  &:before{
+      content: "";
+      display: block;
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      right: -100px;
+      z-index: -1;
+  }
+  */ }
   @media (max-width: 768px) and (min-width: 576px) {
     #hiddenWin {
-      width: 130%;
+      width: 100%;
       left: -100%; } }
   @media (max-width: 575px) {
     #hiddenWin {
-      width: 140%;
+      width: 100%;
       left: -100%; } }
   #hiddenWin.active {
     left: 0; }
-  #hiddenWin:before {
-    content: "";
-    display: block;
+  #hiddenWin .btn_home {
     width: 400px;
-    height: 300px;
+    right: -400px;
+    height: 200px;
+    position: absolute;
+    top: 0;
     background-image: url(../image/top_cloud_lt.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: left top;
-    position: absolute;
-    top: 0;
-    right: -100px;
-    z-index: -1; }
+    background-position: left top; }
+    #hiddenWin .btn_home h1 {
+      width: 90%;
+      height: 82%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url(../image/svg/flag.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain; }
+      #hiddenWin .btn_home h1 a {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-top: 200px;
+        line-height: 200px;
+        overflow: hidden;
+        margin: 0 auto; }
+    @media (max-width: 768px) and (min-width: 576px) {
+      #hiddenWin .btn_home {
+        width: 300px;
+        right: -300px;
+        height: 150px; }
+        #hiddenWin .btn_home h1 a {
+          padding-top: 180px; } }
+    @media (max-width: 575px) and (min-width: 481px) {
+      #hiddenWin .btn_home {
+        width: 240px;
+        right: -240px;
+        height: 120px; }
+        #hiddenWin .btn_home h1 a {
+          padding-top: 180px; } }
+    @media (max-width: 480px) and (min-width: 321px) {
+      #hiddenWin .btn_home {
+        width: 200px;
+        right: -200px;
+        height: 120px; }
+        #hiddenWin .btn_home h1 a {
+          padding-top: 140px; } }
+    @media (max-width: 320px) {
+      #hiddenWin .btn_home {
+        width: 150px;
+        right: -150px;
+        height: 100px; }
+        #hiddenWin .btn_home h1 a {
+          padding-top: 120px; } }
   #hiddenWin .hidden_left {
     width: 500px;
     height: 100%;
@@ -315,59 +374,6 @@ body {
             #hiddenWin .hidden_left #mainMenu ul li a {
               line-height: 1.4em;
               width: auto; } }
-  #hiddenWin .hidden_right {
-    width: 300px;
-    height: 100%;
-    position: relative; }
-    @media (max-width: 768px) and (min-width: 576px) {
-      #hiddenWin .hidden_right {
-        width: 30%; } }
-    @media (max-width: 575px) {
-      #hiddenWin .hidden_right {
-        width: 40%; } }
-    #hiddenWin .hidden_right header .siteTitle {
-      width: 100%;
-      height: auto;
-      box-sizing: border-box;
-      padding: 20px 0 0;
-      margin: 0;
-      text-align: center;
-      position: relative; }
-      @media (max-width: 991px) and (min-width: 768px) {
-        #hiddenWin .hidden_right header .siteTitle {
-          padding: 10px 0 0; } }
-      @media (max-width: 767px) and (min-width: 576px) {
-        #hiddenWin .hidden_right header .siteTitle {
-          padding: 20px 0 0; } }
-      @media (max-width: 575px) {
-        #hiddenWin .hidden_right header .siteTitle {
-          padding: 20px 0 0; } }
-      #hiddenWin .hidden_right header .siteTitle h1 {
-        line-height: 40px;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        position: relative; }
-        #hiddenWin .hidden_right header .siteTitle h1 a {
-          display: block;
-          width: 100%;
-          height: 0;
-          padding-top: 200px;
-          line-height: 200px;
-          overflow: hidden;
-          background-image: url(../image/svg/flag.svg);
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: contain;
-          margin: 0 auto; }
-          @media (max-width: 767px) and (min-width: 576px) {
-            #hiddenWin .hidden_right header .siteTitle h1 a {
-              padding-top: 100px;
-              line-height: 100px; } }
-          @media (max-width: 575px) {
-            #hiddenWin .hidden_right header .siteTitle h1 a {
-              padding-top: 100px;
-              line-height: 100px; } }
 
 .fixedmenu {
   width: 120px;
@@ -545,7 +551,11 @@ h3 {
       #topInfo .toplist li a .date {
         width: 27%;
         box-sizing: border-box;
-        padding: 0 5px; }
+        padding: 0 30px 0 5px;
+        text-align: right; }
+        @media (max-width: 575px) {
+          #topInfo .toplist li a .date {
+            text-align: left; } }
         #topInfo .toplist li a .date span {
           display: inline-block;
           line-height: 30px;
@@ -817,6 +827,9 @@ h3 {
 
 .content {
   padding-top: 80px; }
+  @media (max-width: 575px) {
+    .content {
+      padding-top: 130px; } }
   .content #pgCntnt {
     font-size: 16px;
     letter-spacing: -1px; }

@@ -32,14 +32,10 @@
     <div id="wrapper">
        
         <div id="hiddenWin" class="wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay=".2s">
-            <div class="hidden_right">
-                <header class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay=".9s">
-                    <div class="siteTitle">
-                        <h1>
-                            <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-                        </h1>
-                    </div>
-                </header>
+            <div class="btn_home">
+                <h1>
+                    <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                </h1>
             </div>
             <div class="hidden_left">
                 <h2>メニュー</h2>

@@ -170,45 +170,123 @@ body{
 
 
 #hiddenWin{
+    /*
     display: flex;
     flex-direction: row-reverse;
+    */
     width: 800px;
     height: 100%;
     box-sizing: border-box;
-    background: transparent;
+    background: #fff;
     transition: all ease .4s;
     position: fixed;
     top: 0;
-    left: -500px;
+    left: -800px;
     z-index: 5;
     @media (max-width: 768px) and (min-width: 576px){//初期ipad対応768px
-        width: 130%;
+        width: 100%;
         left: -100%;
     }
     @media (max-width: 575px){
-        width: 140%;
+        width: 100%;
         left: -100%;
     }
     &.active{
         left: 0;
     }
-    /*左上雲*/
-    &:before{
-        content: "";
-        display: block;
+    
+    .btn_home{
         width: 400px;
-        height: 300px;
+        right: -400px;
+        height: 200px;
+        position: absolute;
+        top: 0;
         background: {
             image: url(#{$imgPath}top_cloud_lt.png);
             repeat: no-repeat;
             size: 100% 100%;
             position: left top;
         }
+        h1{
+            width: 90%;
+            height: 82%;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: {
+                image: url(#{$imgPath}svg/flag.svg);
+                repeat: no-repeat;
+                position: left center;
+                size: contain;
+            }
+            a{
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-top: 200px;
+                line-height: 200px;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 768px) and (min-width: 576px){
+            width: 300px;
+            right: -300px;
+            height: 150px;
+            h1{
+                a{
+                    padding-top: 180px;
+                }
+            }
+        }
+        @media (max-width: 575px) and (min-width: 481px){
+            width: 240px;
+            right: -240px;
+            height: 120px;
+            h1{
+                a{
+                    padding-top: 180px;
+                }
+            }
+        }
+        @media (max-width: 480px) and (min-width: 321px){
+            width: 200px;
+            right: -200px;
+            height: 120px;
+            h1{
+                a{
+                    padding-top: 140px;
+                }
+            }
+        }
+        @media (max-width: 320px){
+            width: 150px;
+            right: -150px;
+            height: 100px;
+            h1{
+                a{
+                    padding-top: 120px;
+                }
+            }
+        }
+    }
+    
+    /*左上雲
+    &:before{
+        content: "";
+        display: block;
+        width: 400px;
+        height: 300px;
         position: absolute;
         top: 0;
         right: -100px;
         z-index: -1;
     }
+    */
+    
     .hidden_left{
         width: 500px;
         height: 100%;
@@ -284,69 +362,6 @@ body{
                         @media (max-width: 767px){
                             line-height: 1.4em;
                             width: auto;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .hidden_right{
-        width: 300px;
-        height: 100%;
-        position: relative;
-        @media (max-width: 768px) and (min-width: 576px){
-            width: 30%;
-        }
-        @media (max-width: 575px){
-            width: 40%;
-        }
-        header{
-            .siteTitle{
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 20px 0 0;
-                margin: 0;
-                text-align: center;
-                position: relative;
-                @media (max-width: 991px) and (min-width: 768px){
-                    padding: 10px 0 0;
-                }
-                @media (max-width: 767px) and (min-width: 576px){
-                    padding: 20px 0 0;
-                }
-                @media (max-width: 575px){
-                    padding: 20px 0 0;
-                }
-                h1{
-                    line-height: 40px;
-                    box-sizing: border-box;
-                    padding: 0;
-                    margin: 0;
-                    position: relative;
-                    a{
-                        display: block;
-                        width: 100%;
-                        height: 0;
-                        padding-top: 200px;
-                        line-height: 200px;
-                        overflow: hidden;
-                        background: {
-                            image: url(#{$imgPath}svg/flag.svg);
-                            repeat: no-repeat;
-                            position: center center;
-                            size: contain;
-                        }
-                        margin: 0 auto;
-                        @media (max-width: 767px) and (min-width: 576px){
-                            padding-top: 100px;
-                            line-height: 100px;
-                        }
-                        @media (max-width: 575px){
-                            padding-top: 100px;
-                            line-height: 100px;
-                        }
-                        &:hover{
                         }
                     }
                 }
@@ -571,7 +586,11 @@ h3{
                 .date{
                     width: 27%;
                     box-sizing: border-box;
-                    padding: 0 5px;
+                    padding: 0 30px 0 5px;
+                    text-align: right;
+                    @media (max-width: 575px){
+                        text-align: left;
+                    }
                     span{
                         display: inline-block;
                         line-height: 30px;
@@ -917,6 +936,9 @@ h3{
 //content
 .content{
     padding-top: 80px;
+    @media (max-width: 575px){
+        padding-top: 130px;
+    }
     
     #pgCntnt{
         font: {
