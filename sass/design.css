@@ -125,12 +125,14 @@ body > #wrapper {
     width: 100%;
     height: 100%;
     transition: all .4s ease; }
-  #contents.dark::before {
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
+  #contents.dark {
+    filter: blur(5px); }
+    #contents.dark::before {
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
 
 footer {
   width: 100%;
@@ -403,8 +405,9 @@ body {
     transform: rotate(-20deg); }
     @media (max-width: 575px) {
       .fixedmenu a.showbtn1 {
-        padding: 10px 0 0;
-        font-size: 15px; } }
+        padding: 15px 0 0;
+        font-size: 15px;
+        line-height: 28px; } }
     .fixedmenu a.showbtn1 span {
       font-size: 26px;
       border-bottom: 2px solid #ff755e; }
@@ -544,6 +547,9 @@ h3 {
 
 #topInfo {
   margin-bottom: 100px; }
+  @media (max-width: 575px) {
+    #topInfo {
+      margin-bottom: 40px; } }
   #topInfo .toplist li {
     margin-bottom: 30px; }
     #topInfo .toplist li a {
@@ -619,10 +625,13 @@ h3 {
       .slideWrap .simply-scroll-list li img {
         width: 100%;
         height: auto; }
-      @media screen and (max-width: 767px) {
+      @media (max-width: 767px) and (min-width: 576px) {
         .slideWrap .simply-scroll-list li {
           width: 180px;
           height: auto; } }
+      @media (max-width: 575px) {
+        .slideWrap .simply-scroll-list li {
+          width: 230px; } }
 
 #topAbout {
   padding-top: 60px;
@@ -671,25 +680,53 @@ h3 {
           line-height: 40px;
           padding-top: 10px;
           font-size: 26px; } }
-  #topAbout img {
-    width: 100%;
-    height: auto;
+  #topAbout .philosophy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
     margin: 0 auto; }
-  #topAbout .desc {
-    box-sizing: border-box;
-    padding: 20px 0 0;
-    font-size: 16px;
-    line-height: 36px;
-    letter-spacing: -1px; }
-  #topAbout #sec1 {
+    @media (max-width: 575px) {
+      #topAbout .philosophy {
+        width: 95%; } }
+    #topAbout .philosophy .imgwrap {
+      width: 45%;
+      text-align: center; }
+      @media (max-width: 768px) {
+        #topAbout .philosophy .imgwrap {
+          width: 100%;
+          margin-bottom: 20px; } }
+      #topAbout .philosophy .imgwrap img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto; }
+    #topAbout .philosophy .desc {
+      width: 55%; }
+      @media (max-width: 768px) {
+        #topAbout .philosophy .desc {
+          width: 100%; } }
+      #topAbout .philosophy .desc h3 {
+        padding-top: 30px; }
+      #topAbout .philosophy .desc p {
+        box-sizing: border-box;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 36px;
+        letter-spacing: -1px; }
+  #topAbout #sec1, #topAbout #sec2, #topAbout #sec5 {
     margin-bottom: 60px; }
-  #topAbout #sec2 {
+    @media (max-width: 768px) {
+      #topAbout #sec1, #topAbout #sec2, #topAbout #sec5 {
+        margin-bottom: 20px; } }
+  #topAbout #sec2, #topAbout #sec6 {
+    flex-direction: row-reverse; }
+  #topAbout #sec3 {
     margin-bottom: 10px; }
-    #topAbout #sec2 h3.idx_yousu {
+    #topAbout #sec3 h3.idx_yousu {
       line-height: 40px;
       padding: 2px 0 0 57px;
       position: relative; }
-      #topAbout #sec2 h3.idx_yousu::before {
+      #topAbout #sec3 h3.idx_yousu::before {
         content: "";
         display: block;
         width: 50px;
@@ -701,11 +738,11 @@ h3 {
         position: absolute;
         top: 0;
         left: 0; }
-    #topAbout #sec2 .idx_right_insta {
+    #topAbout #sec3 .idx_right_insta {
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap; }
-      #topAbout #sec2 .idx_right_insta .logo_insta {
+      #topAbout #sec3 .idx_right_insta .logo_insta {
         display: inline-block;
         width: 40px;
         height: 0;
@@ -716,16 +753,22 @@ h3 {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain; }
-      #topAbout #sec2 .idx_right_insta a {
+      #topAbout #sec3 .idx_right_insta a {
         display: inline-block;
         line-height: 40px;
         padding-right: 10px;
         font-size: 18px; }
-  #topAbout #sec3 {
+  #topAbout #sec4 {
     margin-bottom: 70px; }
     @media (max-width: 767px) {
-      #topAbout #sec3 {
+      #topAbout #sec4 {
         margin-bottom: 0; } }
+  @media (max-width: 575px) and (min-width: 321px) {
+    #topAbout #sec6 .desc h3 {
+      font-size: 22px; } }
+  @media (max-width: 320px) {
+    #topAbout #sec6 .desc h3 {
+      font-size: 19px; } }
 
 #recruit h2 {
   margin-bottom: 1em; }

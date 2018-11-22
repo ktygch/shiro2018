@@ -1,3 +1,9 @@
+                <div class="container-fluid">
+                    <div class="row">
+                        <?php get_template_part('slide/topslide2'); ?>
+                    </div>
+                </div>
+            
             </div><?php /* #main */ ?>
         </div><?php /*#contents*/ ?>
         

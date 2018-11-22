@@ -61,19 +61,30 @@
             </div>
         </div>
         
-        <div id="sec1" class="row">
-            <div class="col-12 col-sm-12 col-md-5 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
+        <div class="philosophy" id="sec1">
+            <div class="imgwrap wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
                 <img src="<?php bloginfo('template_directory'); ?>/image/top/philo1.png" alt="">
             </div>
-            <div class="col-12 col-sm-12 col-md-6 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
-                <p class="desc">
-                    　この合唱団は、子どもの「遊び」から生まれる創造的自己表現活動を重視し、音楽を通して協調性・創造性等、幅広い知的好奇心を養い、豊かな人間性を育てることを目的にして展開しています。<br>
-                    　現在、合唱講座・合唱団低学年・合唱団高学年・混声合唱団の4つのグループで構成されており、各グループとも週一回、約2時間のレッスンで、合唱練習に加えて、身体表現活動、朗読劇等を取り入れた演劇活動、造形活動、ふれあいを大切にした野外活動、そしてシンセサイザーやリズム楽器による合奏等を織り込んだ、ユニークな総合的プログラムを展開しております。
+            <div class="desc wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
+                <p>
+                    　こどもの城児童合唱団・混声合唱団は、小学生から大人を対象にした合唱団です。
+「みつけよう、すきなこと」をテーマに、週１回の練習でさまざまなジャンルの歌とダンス、サンバ楽器などの演奏、多様なアーティストとの共演、朗読劇などのレッスンを行います。丁寧な指導を通して、子どもたちは音楽に親しみ、仲間と触れ合い、自分らしさを表現する力を伸ばしていく場です。
                 </p>
             </div>
         </div>
         
-        <div id="sec2" class="row">
+        <div class="philosophy" id="sec2">
+            <div class="imgwrap wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
+                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo4.png" alt="">
+            </div>
+            <div class="desc wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
+                <p>
+                    　世代や性別、国籍や障がいの有無を超えた多様なメンバー構成、そして歌やダンスのほかアートやドラマにも親しむバラエティに富んだレッスン内容、さらにコンサートや公演など多くのステージへの出演機会があります。音楽イベント、オペラ、定期コンサート、地方での交流コンサートなど、年に10本を超える舞台へ出演します。通常のレッスンに加えての特別レッスンや、コンディションの調整をするなど、子どもたちにとっては楽しいことばかりではないかもしれません。メンバーと一緒に乗り越えステージにたった後には、一体感、充実感、達成感に溢れ、子どもたちは自信に満ちた表情をしています。
+                </p>
+            </div>
+        </div>
+        
+        <div id="sec3" class="row">
             <div class="col-12 col-sm-6 wow fadeInLeft" data-wow-duration=".6s" data-wow-delay="">
                 <h3 class="idx_yousu">活動のようす</h3>
             </div>
@@ -87,22 +98,33 @@
             </div>
         </div>
         
-        <div id="sec3" class="row">
+        <div id="sec4" class="row">
             <div class="col-12 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".3s">
                 <ul id="instafeed">
                 </ul>
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 offset-md-1 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".6s" data-wow-offset="2">
-                <p class="desc">
-                    　この合唱団は、子どもの「遊び」から生まれる創造的自己表現活動を重視し、音楽を通して協調性・創造性等、幅広い知的好奇心を養い、豊かな人間性を育てることを目的にして展開しています。<br>
-                    　現在、合唱講座・合唱団低学年・合唱団高学年・混声合唱団の4つのグループで構成されており、各グループとも週一回、約2時間のレッスンで、合唱練習に加えて、身体表現活動、朗読劇等を取り入れた演劇活動、造形活動、ふれあいを大切にした野外活動、そしてシンセサイザーやリズム楽器による合奏等を織り込んだ、ユニークな総合的プログラムを展開しております。
+        <div class="philosophy" id="sec5">
+            <div class="imgwrap wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
+                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo2.png" alt="">
+            </div>
+            <div class="desc wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
+                <p>
+                    　こどもの城合唱団の初めての晴れ舞台は1985年、日本で唯一の国立児童館「こどもの城」のオープニングイベントでした。その活動は30年の歴史を重ね、現在は青山学院大学を会場にレッスンを行っています。国際色豊かで、文化の雰囲気漂うキャンパスに通うことは子どもたちの楽しみの一つになっています。合唱団に入る前の２歳〜5歳のリトミッククラスの子どもたちは親子で参加し、表現力やコミュニケーション能力の向上を図るプログラムに取り組んでいます。
                 </p>
             </div>
-            <div class="col-12 col-sm-12 col-md-5 wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".9s" data-wow-offset="2">
-                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo2.png" alt="">
+        </div>
+        
+        <div class="philosophy" id="sec6">
+            <div class="imgwrap wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".8s" data-wow-offset="2">
+                <img src="<?php bloginfo('template_directory'); ?>/image/top/philo5.png" alt="">
+            </div>
+            <div class="desc wow fadeInUp" data-wow-duration=".6s" data-wow-delay=".5s" data-wow-offset="2">
+                <h3 class="center">「みつけよう、すきなこと」</h3>
+                <p>
+                　多感な時期だからこそ、人と触れ合い、大きな声で歌い、音楽を力に生きていけるように。自分の個性を信じ、好きなものと出会い、力強く歩きだせるように。さらに、ひとり一人の違う歩みを音楽で支えていきたいと願いを込めてプログラムを行っています。
+                </p>
             </div>
         </div>
         
@@ -220,12 +242,6 @@
             </div>        
         </div>
         
-    </div>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <?php get_template_part('slide/topslide2'); ?>
-        </div>
     </div>
     
 <?php get_footer(); ?>

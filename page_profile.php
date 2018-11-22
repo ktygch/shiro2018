@@ -24,10 +24,10 @@
                             <h3 class="idx"><span>講師紹介</span></h3>
 
                             <div id="yoshimura" class="row wow fadeIn" data-wow-duration=".6s" data-wow-offset="15">
-                                <div class="col-12 col-sm-5">
+                                <div class="col-12 col-sm-4 offset-sm-1">
                                     <img src="<?php bloginfo('template_directory'); ?>/image/profile/yoshimurasensei.jpg">
                                 </div>
-                                <div class="col-12 col-sm-7">
+                                <div class="col-12 col-sm-6">
                                     <h3><span class="f14 bold">指揮者紹介</span>&nbsp;吉村 温子</h3>
                                     <p>			
                                         　こどもの城オープン前より音楽事業部の企画に携わり、こどもの城児童合唱団・混声合唱団の設立当初より指揮をとっており、他にも幼児のための親子リトミック、就園前の親子リトミック等、幼児から大人までを対象に幅広くユニークな音楽表現活動を展開している。<br>
@@ -49,10 +49,10 @@
                             </div>
 
                             <div id="yamamoto" class="row wow fadeIn" data-wow-duration=".6s" data-wow-offset="15">
-                                <div class="col-12 col-sm-5 order-sm-2">
+                                <div class="col-12 col-sm-4 order-sm-2">
                                     <img src="<?php bloginfo('template_directory'); ?>/image/profile/makotosensei.jpg">
                                 </div>
-                                <div class="col-12 col-sm-7 order-sm-1">
+                                <div class="col-12 col-sm-6 offset-sm-1 order-sm-1">
                                     <h3 class="right"><span class="f14 bold">演奏者紹介</span>&nbsp;山本 誠</h3>
                                     <p>	
                                         　保育士資格を取得し、1985年の「こどもの城」開館時より
@@ -66,10 +66,10 @@
                             </div>
 
                             <div id="hayashi" class="row wow fadeIn" data-wow-duration=".6s" data-wow-offset="15">
-                                <div class="col-12 col-sm-5">
+                                <div class="col-12 col-sm-4 offset-sm-1">
                                     <img src="<?php bloginfo('template_directory'); ?>/image/profile/adusasensei.jpg">
                                 </div>
-                                <div class="col-12 col-sm-7">
+                                <div class="col-12 col-sm-6">
                                     <h3><span class="f14 bold">伴奏者紹介</span>&nbsp;林 あづさ</h3>
                                     <p>			
                                         こどもの城児童合唱団・混声合唱団専属ピアノ伴奏者<br>
@@ -78,8 +78,7 @@
                                 </div>
                             </div>
                             
-                            
-                            
+                            <?php /*
                             <hr>
 
                             <br />
@@ -173,6 +172,8 @@
                                 </div>
 
                             </div>
+                            */ ?>
+                            
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
