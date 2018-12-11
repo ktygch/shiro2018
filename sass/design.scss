@@ -21,9 +21,14 @@ body > #wrapper{
 
 #contents{
     box-sizing: border-box;
-    padding-bottom: 300px;
-    //padding-left: 300px;
+    padding-bottom: 700px;
     position: relative;
+    @media (max-width: 767px) and (min-width: 576px){
+        padding-bottom: 1500px;
+    }
+    @media (max-width: 575px){
+        padding-bottom: 1500px;
+    }
     &::before{
         content: '';
         display: block;
@@ -45,21 +50,25 @@ body > #wrapper{
 
 footer{
     width: 100%;
-    height: 300px;
+    height: 700px;
     box-sizing: border-box;
     position: absolute;
     bottom: 0;
     left: 0;
     padding-bottom: 50px;
+    @media (max-width: 767px) and (min-width: 576px){
+        height: 1500px;
+    }
+    @media (max-width: 575px){
+        height: 1500px;
+        padding-top: 60px;
+    }
     #footerMenu{
+        margin: 0 0 30px;
+        @media (max-width: 767px){
+            margin-bottom: 100px;
+        }
         ul{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 0 0 30px;
-            @media (max-width: 575px){
-                display: inherit;
-            }
             li{
                 margin-bottom: 5px;
                 padding-left: 42px;
@@ -140,15 +149,23 @@ footer{
 body{
     @extend .chibimaru;
     line-height: 36px;
-    font-size: 14px;
+    font-size: 18px;
     //color: #1F3134;
     //color: #3A8485;
     color: #697a7a;
+    @media (max-width: 768px) and (min-width: 576px){
+        line-height: 30px;
+    }
+    @media (max-width: 575px) and (min-width: 481px){
+        line-height: 30px;
+    }
     @media (max-width: 480px) and (min-width: 321px){
-        font-size: 13px;
+        line-height: 28px;
+        font-size: 17px;
     }
     @media (max-width: 320px){
-        font-size: 11px;
+        line-height: 24px;
+        font-size: 15px;
     }
     position: relative;
     &:before{
@@ -171,10 +188,6 @@ body{
 
 
 #hiddenWin{
-    /*
-    display: flex;
-    flex-direction: row-reverse;
-    */
     width: 800px;
     height: 100%;
     box-sizing: border-box;
@@ -275,33 +288,20 @@ body{
         }
     }
     
-    /*左上雲
-    &:before{
-        content: "";
-        display: block;
-        width: 400px;
-        height: 300px;
-        position: absolute;
-        top: 0;
-        right: -100px;
-        z-index: -1;
-    }
-    */
-    
     .hidden_left{
-        width: 500px;
+        width: 800px;
         height: 100%;
         overflow-y: scroll;
         box-sizing: border-box;
-        padding: 30px;
+        padding: 30px 30px 90px;
         background: #fff;
         @media (max-width: 768px) and (min-width: 576px){
             width: 100%;
-            padding: 30px;
+            padding: 30px 30px 90px;
         }
         @media (max-width: 575px){
             width: 100%;
-            padding: 30px 15px;
+            padding: 30px 15px 60px;
         }
         h2{
             font-size: 20px;
@@ -354,7 +354,7 @@ body{
                         }
                     }
                     a{
-                        display: block;
+                        display: inline-block;
                         box-sizing: border-box;
                         line-height: 40px;
                         padding: 0 10px 0 0;
@@ -381,7 +381,7 @@ body{
     @media (max-width: 575px){
         width: 90px;
         height: 90px;
-        right: 1em;
+        right: .5em;
     }
     a.showbtn1{
         display: block;
@@ -416,6 +416,21 @@ body{
         }
     }
     
+}
+
+//次回公園予定告知エリア
+.widget_text{
+    h2{
+        line-height: 40px;
+        margin-bottom: 15px;
+        text-align: left;
+        font-size: 32px !important;
+        color: #3A8485;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
 }
 
 //ヘッダー画像
@@ -503,7 +518,10 @@ body{
 #main{
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
+    @media (max-width: 767px){
+        padding-bottom: 0;
+    }
 }
 
 
@@ -515,9 +533,9 @@ body{
     text-align: center;
     span{
         display: inline-block;
-        line-height: 50px;
+        line-height: 30px;
         box-sizing: border-box;
-        padding: 10px 15px 20px;
+        padding: 15px 15px 30px;
         position: relative;
         font-size: 36px;
         @media (max-width: 991px) and (min-width: 768px){
@@ -579,7 +597,7 @@ h3{
 
 
 #topInfo{
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     @media (max-width: 575px){
         margin-bottom: 40px;
     }
@@ -593,7 +611,7 @@ h3{
                     box-sizing: border-box;
                     padding: 0 30px 0 5px;
                     text-align: right;
-                    @media (max-width: 575px){
+                    @media (max-width: 767px){
                         text-align: left;
                     }
                     span{
@@ -637,10 +655,6 @@ h3{
 
 .slideWrap{
     padding: 0;
-    margin-bottom: 80px;
-    @media (max-width: 575px){
-        margin-bottom: 0;
-    }
     .svg_clip{
         width: 80%;
         margin: 0 auto;
@@ -694,7 +708,7 @@ h3{
 
 
 #topAbout{
-    padding-top: 60px;
+    padding-top: 80px;
     margin-bottom: 100px;
     h2{
         display: flex;
@@ -774,6 +788,7 @@ h3{
                 width: 100%;
             }
             h3{
+                font-size: 26px;
                 padding-top: 30px;
             }
             p{
@@ -894,7 +909,9 @@ h3{
                 padding: 2em 1.5em 1em;
                 margin: 0 auto;
                 border-radius: 20px;
+                font-size: 16px;
                 h3{
+                    margin-bottom: 40px;
                     line-height: 50px;
                     text-align: center;
                     @media (max-width: 991px) and (min-width: 768px){
@@ -947,8 +964,13 @@ h3{
                 .inner{
                     color: #ff9c31;
                     h3{
+                        line-height: 34px;
                         @media (max-width: 991px) and (min-width: 768px){
+                            line-height: 34px;
                             font-size: 22px;
+                        }
+                        @media (max-width: 767px){
+                            line-height: 34px;
                         }
                     }
                     dl{
@@ -965,7 +987,7 @@ h3{
                 .inner{
                     color: #2cb7af;
                     h3{
-                        line-height: 30px;
+                        line-height: 34px;
                     }
                     dl{
                         dt{
@@ -1085,4 +1107,88 @@ h3{
 //団員募集
 #pageRecruit{
     padding-top: 130px;
+    padding-bottom: 100px;
+}
+
+.formwrap{
+    //padding-top: 2em;
+    h3{
+        margin-bottom: 30px;
+        text-align: center;
+        position: inherit;
+        z-index: 1;
+    }
+    #formRecruit{
+        padding-top: 2em;
+        .each_form{
+            margin-bottom: 1em;
+            & > label{
+                line-height: 30px;
+                padding: 5px;
+            }
+            & > span{
+                display: block;
+            }
+
+            select{
+                width: 100%;
+                text-overflow: ellipsis;
+                background: transparent;
+                background-image: none;
+                box-shadow: none;
+                -webkit-appearance: none;
+                appearance: none;
+                box-sizing: border-box;
+                height: 45px;
+                padding: 0 12px;
+                border: 1px solid #ddd;
+                border-radius: 0;
+                outline: none;
+                color: #666;
+            }
+            
+            input{
+                //フォームフォーカスズーム切
+                font-size: 16px;
+                width: 100%;
+                height: 45px;
+                box-sizing: border-box;
+                padding: 0 12px;
+                border: 1px solid #ddd;
+                border-radius: 0;
+                outline: none;
+            }
+            input:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+            
+            textarea{
+                //フォームフォーカスズーム切
+                font-size: 16px;
+                width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 0;
+                box-sizing: border-box;
+                padding: 12px;
+            }
+
+            span.wpcf7-not-valid-tip//必須アラート文
+            {
+                padding-left: 5px;
+                padding-top: 5px;
+            }
+        }
+        .confirmBtns{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+            padding-top: 60px;
+            .btn{
+                margin: 0 5px;
+                //background: #374D64 !important;
+                //border-color: #374D64;
+            }
+        }
+    }
 }

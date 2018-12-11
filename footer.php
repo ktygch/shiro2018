@@ -10,7 +10,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 col-sm-12 col-md-4">
                         <div id="footerMenu">
                             <ul>
                                 <li>
@@ -31,10 +31,16 @@
                                 </li>
                                 */ ?>
                                 <li>
-                                    <a href="<?php bloginfo('url'); ?>/?page_id=1897">団員募集</a>
+                                    <a href="<?php bloginfo('url'); ?>/?page_id=1897">見学申込・資料請求</a>
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <a class="twitter-timeline" data-height="500" href="https://twitter.com/kdmn46?ref_src=twsrc%5Etfw">Tweets by kdmn46</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="fb-page" data-href="https://www.facebook.com/&#x3053;&#x3069;&#x3082;&#x306e;&#x57ce;&#x5150;&#x7ae5;&#x5408;&#x5531;&#x56e3;&#x6df7;&#x58f0;&#x5408;&#x5531;&#x56e3;-557863240896091/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/&#x3053;&#x3069;&#x3082;&#x306e;&#x57ce;&#x5150;&#x7ae5;&#x5408;&#x5531;&#x56e3;&#x6df7;&#x58f0;&#x5408;&#x5531;&#x56e3;-557863240896091/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/&#x3053;&#x3069;&#x3082;&#x306e;&#x57ce;&#x5150;&#x7ae5;&#x5408;&#x5531;&#x56e3;&#x6df7;&#x58f0;&#x5408;&#x5531;&#x56e3;-557863240896091/">こどもの城児童合唱団・混声合唱団</a></blockquote></div>
                     </div>
                 </div>
             </div>

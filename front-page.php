@@ -227,9 +227,9 @@
 
             </div>
             <div class="col-12 center">
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success wow fadeIn" role="alert" data-wow-duration=".6s" data-wow-delay=".6s" data-wow-offset="2">
                     <h3>
-                        入団のお申し込みの前に<br>
+                        入団のお申し込みの前に<br class="d-none d-md-inline">
                         一度講座をご見学ください
                     </h3>
                     <p>
