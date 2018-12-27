@@ -65,6 +65,32 @@
                             </svg>
                         </div>
                     </li>
+                    <li>
+                        <div class="svg_clip">
+                            <svg width="0" height="0" stlye="position: absolute; top: 0; left: 0;">
+                                <clipPath id="clip04">
+                                    <path class="st0" d="M262.24,461.41C145.1,474.01,38.85,404.91,23.9,298.57S76.96,60.74,193.64,44.34s218.55-2.41,267.93,119.63
+	C501.87,263.54,499.96,435.85,262.24,461.41z"/>
+                                </clipPath>
+                            </svg>
+                            <svg width="500" height="500" viewBox="0 0 500 500">
+                              <image xlink:href="<?php bloginfo('template_directory'); ?>/image/kids/boy4.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip04)"/>
+                            </svg>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="svg_clip">
+                            <svg width="0" height="0" stlye="position: absolute; top: 0; left: 0;">
+                                <clipPath id="clip02">
+                                    <path d="M244.2,459.03c-116.99,3.53-216.97-73.28-223.68-180.08S75,78.79,185.98,41.58
+        C300.19,3.3,424.64,53.77,464.27,178.81C496.6,280.82,481.6,451.87,244.2,459.03z"/>
+                                </clipPath>
+                            </svg>
+                            <svg width="500" height="500" viewBox="0 0 500 500">
+                              <image xlink:href="<?php bloginfo('template_directory'); ?>/image/kids/boy5.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip02)"/>
+                            </svg>
+                        </div>
+                    </li>
                 </ul>
                
                 
