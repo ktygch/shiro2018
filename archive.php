@@ -39,11 +39,7 @@
                     </div>
                 <?php endif; ?>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <?php get_template_part('pager'); ?>
-            </div>
+            <?php get_template_part('pager'); ?>
         </div>
     </div>
 </div>
