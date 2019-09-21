@@ -136,7 +136,7 @@
             <div class="col-12">
 
                 <h2 class="idx"><span>団員募集中！</span></h2>
-                <p class="center" style="margin-bottom: 60px;">こどもの城合唱団では、新団員の募集をしております。</p>
+                <p class="center" style="margin-bottom: 60px;">こどもの城合唱団では、<br class="d-inline d-md-none">新団員の募集をしております。</p>
                 
                 <ul>
                     <li class="wow fadeInUp" data-wow-duration=".6s">

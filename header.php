@@ -50,7 +50,9 @@
                 <nav id="mainMenu" class="wow fadeIn" data-wow-duration="1.0s" data-wow-delay="1.0s">
                     <?php wp_nav_menu(array('theme_location'=>'top-menu')); ?>
                 </nav>
+                <hr>
                 <h2>次回公演予定</h2>
+                <hr>
                 <?php get_sidebar(); ?>
             </div>
         </div>
@@ -65,15 +67,13 @@
         <div id="contents">
             <?php if(is_front_page()): ?>
                 <div class="img_top wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".1s" style="background-image: url('<?php header_image(); ?>');">
-                    <?php /*
-                    <span>
-                        KODOMONO<br>
-                        SHIRO<br>
-                        CHORUS
-                    </span>
-                    */ ?>
                 </div>
             <?php endif; ?>
-
-
+            <?php /*if(is_front_page()): ?>
+                <div class="img_top wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".1s">
+                    <video class="" src="<?php bloginfo('template_directory'); ?>/image/mp4/test.mp4" autoplay loop muted>
+                    </video>
+                </div>
+            <?php endif;*/ ?>
+            
             <div id="main">

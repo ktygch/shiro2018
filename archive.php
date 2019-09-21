@@ -10,7 +10,7 @@
 <div id="archive" class="content wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 offset-sm-3">
+            <div class="col-12 col-sm-8 offset-sm-2">
                 <h2 class="idx">
                     <span><?php echo $cat_name; ?></span>
                 </h2>
