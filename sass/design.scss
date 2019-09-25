@@ -63,12 +63,12 @@ footer{
         height: 1500px;
         padding-top: 60px;
     }
-    #footerMenu{
+    .menu-footermenu-container{
         margin: 0 0 30px;
         @media (max-width: 767px){
             margin-bottom: 100px;
         }
-        ul{
+        ul#menu-footermenu{
             li{
                 margin-bottom: 5px;
                 padding-left: 42px;
@@ -111,6 +111,16 @@ footer{
                 &:nth-child(5){
                     &::before{
                         background-image: url(#{$imgPath}svg/ico_orng.svg);
+                    }
+                }
+                &:nth-child(6){
+                    &::before{
+                        background-image: url(#{$imgPath}svg/ico_green1.svg);
+                    }
+                }
+                &:nth-child(7){
+                    &::before{
+                        background-image: url(#{$imgPath}svg/ico_ylw.svg);
                     }
                 }
                 a{
@@ -292,6 +302,7 @@ body{
         width: 800px;
         height: 100%;
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
         box-sizing: border-box;
         padding: 30px 30px 90px;
         background: #fff;
@@ -351,6 +362,16 @@ body{
                     &:nth-child(5){
                         &::before{
                             background-image: url(#{$imgPath}svg/ico_orng.svg);
+                        }
+                    }
+                    &:nth-child(6){
+                        &::before{
+                            background-image: url(#{$imgPath}svg/ico_green1.svg);
+                        }
+                    }
+                    &:nth-child(7){
+                        &::before{
+                            background-image: url(#{$imgPath}svg/ico_ylw.svg);
                         }
                     }
                     a{

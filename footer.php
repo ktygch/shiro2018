@@ -11,30 +11,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-4">
-                        <div id="footerMenu">
-                            <ul>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>">ホーム</a>
-                                </li>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/?page_id=63">プロフィール</a>
-                                </li>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/?cat=5">今後の予定</a>
-                                </li>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/?cat=1">活動報告</a>
-                                </li>
-                                <?php /*
-                                <li>
-                                    <a href="">これまでの歩み</a>
-                                </li>
-                                */ ?>
-                                <li>
-                                    <a href="<?php bloginfo('url'); ?>/?page_id=1897">見学申込・資料請求</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'foot-menu'
+                        )); ?>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4">
                         <a class="twitter-timeline" data-height="500" href="https://twitter.com/kdmn46?ref_src=twsrc%5Etfw">Tweets by kdmn46</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

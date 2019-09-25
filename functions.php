@@ -1,6 +1,10 @@
 <?php
 add_theme_support('post-thumbnails');
-register_nav_menu('top-menu', 'Top Menu');
+
+register_nav_menus(array(
+    'top-menu' => 'Top Menu',
+    'foot-menu' => 'Foot Menu'
+));
 
 function my_scripts() {
 wp_enqueue_script( 'jquery' );

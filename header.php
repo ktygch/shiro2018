@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bs/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/design.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/image/favicon.ico">
 
 	<?php /*ie8以前へのhtml5対応用スクリプト*/ ?>
 	<!--[if lt IE 9]>
