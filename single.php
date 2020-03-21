@@ -10,10 +10,12 @@
                         <?php $thumbnail_id = get_post_thumbnail_id(); ?>
                         <?php $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'full' ); ?>
                         <?php list($src) = $eye_img; ?>
-                        <div class="main_pic">
-                            <div class="inner_img" style="background-image: url(<?php echo $src; ?>);"></div>
-                        </div>
-                        <h3><?php the_title(); ?></h3>
+                        <?php if($eye_img): ?>
+                            <div class="main_pic">
+                                <div class="inner_img" style="background-image: url(<?php echo $src; ?>);"></div>
+                            </div>
+                        <?php endif; ?>
+                        <h2><?php the_title(); ?></h2>
                         <div class="right">
                             <?php the_time('Y/n/j H:i') ; ?>
                         </div>
