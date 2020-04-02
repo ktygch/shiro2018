@@ -902,11 +902,14 @@ h3 {
       font-size: 16px; }
       #recruit ul li .inner h3 {
         margin-bottom: 40px;
-        line-height: 50px;
+        line-height: 70px;
         text-align: center; }
         @media (max-width: 991px) and (min-width: 768px) {
           #recruit ul li .inner h3 {
-            font-size: 23px; } }
+            font-size: 22px; } }
+        @media (max-width: 767px) {
+          #recruit ul li .inner h3 {
+            line-height: 34px; } }
       #recruit ul li .inner dl dt, #recruit ul li .inner dl dd {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box; }
@@ -935,15 +938,6 @@ h3 {
       background: #fff2bb; }
       #recruit ul li:nth-child(2) .inner {
         color: #ff9c31; }
-        #recruit ul li:nth-child(2) .inner h3 {
-          line-height: 34px; }
-          @media (max-width: 991px) and (min-width: 768px) {
-            #recruit ul li:nth-child(2) .inner h3 {
-              line-height: 34px;
-              font-size: 22px; } }
-          @media (max-width: 767px) {
-            #recruit ul li:nth-child(2) .inner h3 {
-              line-height: 34px; } }
         #recruit ul li:nth-child(2) .inner dl dt span {
           background: #ff9c31; }
     #recruit ul li:nth-child(3) {
