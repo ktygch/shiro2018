@@ -40,7 +40,7 @@
       
     <div id="wrapper">
        
-        <div id="hiddenWin" class="wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay=".2s">
+        <div id="hiddenWin">
             <div class="btn_home">
                 <h1>
                     <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
