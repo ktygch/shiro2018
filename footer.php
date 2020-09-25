@@ -41,21 +41,34 @@
         new WOW().init();
     </script>
     
-    <script src="<?php bloginfo('template_directory'); ?>/js/min/instafeed.min.js"></script>
-    <script type="text/javascript">
-        var feed = new Instafeed({
-            clientId: 'e050ccd6ea3b46ea976654336aef026c',
-            get: 'user', 
-            userId: '4372116736',
-            accessToken:'4372116736.1677ed0.dbd93064e75a41d282b8c68aa0ff5c96',
-            sortBy:'random', //並び順をランダムに
-            links: true,
-            limit: 10, // 取得件数 
-            resolution:'low_resolution', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
-            template: '<li><a href="{{link}}" target="_blank"><span style="background-image: url({{image}});"></span></a></li>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
-        });
-        feed.run();
+    <script>
+        jQuery(function($) {
+            $(function(){
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://graph.facebook.com/v3.0/17841404462086514?fields=name%2Cmedia.limit(10)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cthumbnail_url%2Cmedia_type%2Cusername%7D&access_token=EAAPnl7N3sfkBAHD03NSj3HEkZCL3kxlWxyA1LlhO9R8TNVKBW9uFyL7EWxZAKsq02CVziGCfXBr4V3BlFQNWRDJSYVOrhtjGcmxMJcjemfmBHa6Q5rqeL2VZA2xvIrujAZCWvEJNDXwORajq6JgA63b1tcL6bmi3D4VXoz0c7zULBoRPaVxO',
+                    dataType: 'json',
+                    success: function(json) {
 
+                        var html = '';
+                        var insta = json.media.data;
+                        for (var i = 0; i < insta.length; i++) {
+                        var media_type = insta[i].media_type;
+                            if ( insta[i].media_type == "IMAGE" || insta[i].media_type == "CAROUSEL_ALBUM" ) {
+                                html += '<li><a href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><span class="square-content"  style="background-image: url(' + insta[i].media_url + ');"></span></a></li>';
+                            } else if (media_type == "VIDEO" ) {
+                                html += '<li><a href="' + insta[i].permalink + '" target="_blank" rel="noopener noreferrer"><span class="square-content"  style="background-image: url(' + insta[i].thumbnail_url + ');"></span></a></li>';
+                                var media_type = '';
+                            }       
+                        }
+                        $("#instafeed").append(html);			
+                    },
+                    error: function() {
+                        //エラー時の処理
+                    }
+                });
+            });
+        });
     </script>
     
 	<script src="<?php bloginfo('template_directory'); ?>/js/min/jquery.simplyscroll.min.js"></script>
